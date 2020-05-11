@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Analyzing On-Time Performance of Commercial Flights",
+    "desc": "Apache Hadoop is utilized for developing MapReduce programs across 20 machines in a HDFS cluster. Approximately 9 GB of data with 120 million samples are analyzed to address various questions. Results show the best/worst time to fly, which U.S. coast has more delays, insights on connecting flights, etc.",
+    "link": "https://github.com/stockeh/mapreduce-analysis-flights"
+  },
+  {
+    "title": "Understanding the Million Song Dataset",
+    "desc": "Apache Hadoop is utilized for developing MapReduce programs across 15 machines in a HDFS cluster. Over 280 GB of data is analyzed with histogramming, PageRank, ordinary least squares, and visualization. Results show statistics on songs, the most generic/unique artists, geographical density, etc.",
+    "link": "https://github.com/stockeh/mapreduce-analysis-msd"
+  },
+  {
+    "title": "User Analysis and Recommendations from Instacart",
+    "desc": "Data analytic methods are explored using Apache Spark to help consumers make the best decisions for their diet. Nutritional strategies of users were analyzed and recommendations were created with machine learning. Findings show that users are relatively healthy and products can be recommended with a high social score.",
+    "link": "https://github.com/stockeh/distributed-spark-analysis"
+  }
+]

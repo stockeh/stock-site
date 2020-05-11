@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Area Mapping in Voluminous Virtual Environments",
+    "desc": "Design of a balanced distributed architecture for isolated clients in a large and shared virtual environment. Backend services scale horizontally and use HDFS to provide partition tolerance and high availability of data. Results show several thousand clients moving about a multi-terabyte environment with marginal latencies.",
+    "link": "https://github.com/stockeh/voluminous-virtual-mapping"
+  },
+  {
+    "title": "Pastry Peer-to-Peer Network",
+    "desc": "Comprehensive, scalable and efficient architecture for peer-to-peer applications. Peers are self organizing, with assigned 16-bit identifiers and form a decentralized logical overlay. Lookup requests leverage a leaf set and distributed hash table to ensure message are delivered in O(log N) hops.",
+    "link": "https://github.com/stockeh/peer-to-peer-network"
+  },
+  {
+    "title": "Distributed, Replicated, and Fault Tolerant File System",
+    "desc": "A failure-resilient file system where fault tolerance if achieved using two techniques: replication and erasure coding. This architecture is similar to the Google File System and provides partition tolerance and high availability of data. Each technique is configurable for different requirements; contrasting storage efficiency and resource utilization.",
+    "link": "https://github.com/stockeh/fault-tolerant-file-system"
+  }
+]

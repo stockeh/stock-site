@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Clustering Cloud Types from the Geostationary Operational Environmental Satellite (GOES-16)",
+    "desc": "Goal to determine how well cloud types natively emerge from minimally-processed GOES-16 channels. Develop an image-to-image convolutional autoencoder using distributed PyTorch to learn salient features that are clustered with k-means. Inferred and visible channels perform best for separating clear and cloudy conditions and detecting icing.",
+    "link": "https://github.com/stockeh/goes-clustering-study"
+  },
+  {
+    "title": "Strategies for Robust Image Classification",
+    "desc": "Display how hardware defects and image capture techniques influence performance of artificial neural networks. Propose training solutions that enhance a models ability to generalize and improve robustness against alterations. Results yield a best-case improvement of 80% and accuracies within 3% of the natural model for all perturbations.",
+    "link": "https://github.com/stockeh/augmented-image-classification",
+    "paper": "https://arxiv.org/abs/2004.03452"
+  },
+  {
+    "title": "Contrasting Generative Adversarial Networks",
+    "desc": "Exploratory project focused on providing insight to the structure, training process and evaluation of GANs. Modified an evaluative Inception Score to contrast generic structures with a Deep Convolutional GAN in PyTorch.",
+    "link": "https://nbviewer.jupyter.org/github/stockeh/research/blob/master/gans/gan-project.ipynb"
+  }
+]
