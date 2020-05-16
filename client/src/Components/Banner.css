@@ -100,10 +100,20 @@
   text-justify: inter-word;
 }
 
-.description p::first-letter {
+.description p:first-child:first-letter {
   color: var(--orange);
-  -webkit-initial-letter: 2;
-  initial-letter: 2;
+  font-size: 350%;
+  padding-right: 8px;
+  padding-top: 10px;
+  float: left;
+  line-height: 0.5;
   font-weight: bold;
-  margin-right: 0.75em;
+}
+
+.i-like-coffee {
+  cursor: pointer;
+}
+
+.i-like-coffee:hover {
+  color: black;
 }

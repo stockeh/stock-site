@@ -1,7 +1,8 @@
 import React from 'react';
-import './Education.css';
 
 import { MdSchool } from 'react-icons/md';
+
+import './Education.css';
 
 function Education() {
   return (
