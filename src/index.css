@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-bottom: 100px;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* COLOR PALLATE */
+/* previous blue 30475e */
+:root {
+  --black: #222831;
+  --blue: #1c5691;
+  --orange: #f2a365;
+  --white: #ececec;
+  --info: #17a2b8;
+}
+
+a:link {
+  color: var(--blue);
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: var(--blue);
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: var(--info);
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: var(--info);
+  background-color: transparent;
+  text-decoration: underline;
+}

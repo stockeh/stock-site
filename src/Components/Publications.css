@@ -1,0 +1,34 @@
+.publications-layout {
+  /* text-align: justify;
+  text-justify: inter-word; */
+}
+
+strong {
+  font-weight: bold;
+}
+
+.authors {
+  margin-bottom: 5px;
+}
+
+.abstract {
+  margin-bottom: 5px;
+}
+
+.btn-primary {
+  color: var(--blue) !important;
+  border-color: var(--blue);
+  background-color: transparent;
+}
+
+.btn-primary:hover {
+  color: white !important;
+  border-color: var(--blue);
+  background-color: var(--blue);
+}
+
+.btn-primary:active {
+  color: white !important;
+  border-color: var(--blue) !important;
+  background-color: var(--blue) !important;
+}
