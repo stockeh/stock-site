@@ -1,7 +1,7 @@
 import React from 'react';
-import pubs from '../assets/publications/pubs.json';
+import lit from '../assets/literature/lit.json';
 import { Row, Col, Button } from 'react-bootstrap';
-import './Publications.css';
+import './Literature.css';
 
 const MAX_LENGTH = 250;
 const NAME = 'Jason Stock';
@@ -12,7 +12,7 @@ function References({ data }) {
       {data.map((item, index) => (
         <Row key={item.title.replace(/\s+/g, '') + index}>
           <Col lg={8} sm={12}>
-            <h4>{item.title}</h4>
+            <h5>{item.title}</h5>
             <p className='abstract'>
               {item.abstract.length > MAX_LENGTH
                 ? item.abstract.substring(0, MAX_LENGTH) + '...'
@@ -24,7 +24,7 @@ function References({ data }) {
                 __html: item.authors.replace(NAME, '<strong>' + NAME + '</strong>'),
               }}
             />
-            <Button size='sm' href='https://arxiv.org/abs/2106.09757'>
+            <Button target='_blank' rel='noopener noreferrer' size='sm' href={item.pdf}>
               PDF
             </Button>
             <br />
@@ -37,12 +37,12 @@ function References({ data }) {
   );
 }
 
-function Publications() {
+function Literature() {
   return (
-    <div className='publications-layout'>
-      <References data={pubs} />
+    <div className='literature-layout'>
+      <References data={lit} />
     </div>
   );
 }
 
-export default Publications;
+export default Literature;

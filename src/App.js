@@ -5,7 +5,7 @@ import { Container, Nav } from 'react-bootstrap';
 import Navigation from './Components/Navigation';
 import Banner from './Components/Banner';
 
-import Publications from './Components/Publications';
+import Literature from './Components/Literature';
 import Projects from './Components/Projects';
 import Miscellaneous from './Components/Miscellaneous';
 
@@ -29,7 +29,7 @@ function App() {
           onSelect={(eventKey) => setTab(eventKey)}
         >
           <Nav.Item>
-            <Nav.Link eventKey='pub'>Publications</Nav.Link>
+            <Nav.Link eventKey='pub'>Literature</Nav.Link>
           </Nav.Item>
           <Nav.Item>
             <Nav.Link eventKey='pro'>Projects</Nav.Link>
@@ -39,7 +39,7 @@ function App() {
           </Nav.Item>
         </Nav>
         <br /> <br />
-        {tab === 'pub' ? <Publications /> : null}
+        {tab === 'pub' ? <Literature /> : null}
         {tab === 'pro' ? <Projects /> : null}
         {tab === 'misc' ? <Miscellaneous /> : null}
       </Container>

@@ -1,5 +1,15 @@
 [
   {
+    "title": "Learnable Wavelet Neural Network for P300 Electroencephalogram Classification",
+    "desc": "Many existing works in BCI rely on time-frequency analysis with predefined filter-banks to decode EEG signals; however, dominate frequencies may not be known prior, which can lead to inaccurate and uninterpretable results. Here, we propose cwt-net to learn a wavelet filter-bank specialized to fit non-stationary signals and improve interpretability and performance for digital signal processing. The model uses a continuous wavelet transform as the first layer of a neural network where the convolution is a parameterized function of the complex Morlet wavelet learned through backpropagation. Our cwt-net achieves 81.25% classification accuracy on EEG data from the Serial P300 Speller (outperforming a fully-connected network, convolutional network, and a network with a predefined filter-bank) and is interpretable by design with wavelets that can be used for time-frequency analysis.",
+    "paper": "/files/stock-cs793-F2021-compressed.pdf"
+  },
+  {
+    "title": "Subvocal Representations of Natural Language for Text Classification",
+    "desc": "This work introduces a method to computationally emulate subvocalization of the human reading process with text and synthesized audio components. Specifically, we combine the high-level features of these components with a neural network for text classification. The proposed network gets 64.48% accuracy on a sentiment analysis task, and experimental results are shown to outperform a text-based LSTM, text-based CNN, and audio only approaches. While this work focuses on text classification, our method can be extended to other problem domains where raw text is in a readable format that can be subvocalized.",
+    "link": "https://github.com/stockeh/subvocal-text-nlp"
+  },
+  {
     "title": "Clustering Cloud Types from the Geostationary Operational Environmental Satellite (GOES-16)",
     "desc": "Goal to determine how well cloud types natively emerge from minimally-processed GOES-16 channels. Develop an image-to-image convolutional autoencoder using distributed PyTorch to learn salient features that are clustered with k-means. Inferred and visible channels perform best for separating clear and cloudy conditions and detecting icing.",
     "link": "https://github.com/stockeh/goes-clustering-study"

@@ -27,12 +27,16 @@ function CustomCard({ card_id, item, show }) {
         <div className='card-body'>
           <p className='card-text'>{item.desc}</p>
           <span>
-            <a href={item.link} className='icon'>
-              <FaGithub />
-            </a>
-            <span>&nbsp;&nbsp;</span>
+            {item.link ? (
+              <span>
+                <a target='_blank' rel='noopener noreferrer' href={item.link} className='icon'>
+                  <FaGithub />
+                </a>
+                <span>&nbsp;&nbsp;</span>
+              </span>
+            ) : null}
             {item.paper ? (
-              <a href={item.paper} className='text-dark'>
+              <a target='_blank' rel='noopener noreferrer' href={item.paper} className='icon'>
                 <RiFilePaper2Line />
               </a>
             ) : null}
