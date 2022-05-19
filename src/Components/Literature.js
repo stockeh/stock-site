@@ -17,20 +17,24 @@ function References({ data }) {
               {item.abstract.length > MAX_LENGTH
                 ? item.abstract.substring(0, MAX_LENGTH) + '...'
                 : item.abstract}
+              <br />
+              <span>&mdash;</span>
             </p>
             <div
-              className='authors text-muted'
               dangerouslySetInnerHTML={{
                 __html: item.authors.replace(NAME, '<strong>' + NAME + '</strong>'),
               }}
             />
+            <p className='conf'>{item.conf}</p>
             <Button target='_blank' rel='noopener noreferrer' size='sm' href={item.pdf}>
               PDF
             </Button>
             <br />
             <br />
           </Col>
-          <Col></Col>
+          <Col lg={4} sm={8}>
+            <img alt={item.logo} className='img-fluid' src={item.logo} />
+          </Col>
         </Row>
       ))}
     </div>

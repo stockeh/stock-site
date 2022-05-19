@@ -1,17 +1,24 @@
-.literature-layout {
-  /* text-align: justify;
-  text-justify: inter-word; */
-}
+/* .literature-layout {
+  text-align: justify;
+  text-justify: inter-word;
+} */
 
 strong {
   font-weight: bold;
 }
 
-.authors {
+img {
+  margin-bottom: 5px;
+  /* max-height: 50% !important; */
+}
+
+
+.abstract {
   margin-bottom: 5px;
 }
 
-.abstract {
+.conf {
+  color: var(--orange) !important;
   margin-bottom: 5px;
 }
 
@@ -27,8 +34,8 @@ strong {
   background-color: var(--blue);
 }
 
-.btn-primary:active {
-  color: white !important;
-  border-color: var(--blue) !important;
-  background-color: var(--blue) !important;
+.btn-primary:focus {
+  color: var(--blue) !important;
+  border-color: var(--blue);
+  background-color: transparent;
 }
