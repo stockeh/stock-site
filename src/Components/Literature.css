@@ -7,11 +7,10 @@ strong {
   font-weight: bold;
 }
 
-img {
-  margin-bottom: 5px;
-  /* max-height: 50% !important; */
+/* for images under citation */
+div.col-sm-8 {
+    padding-bottom: 30px;
 }
-
 
 .abstract {
   margin-bottom: 5px;
