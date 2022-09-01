@@ -9,6 +9,31 @@
   align-items: center;
 }
 
+/* .navbar {
+    --bs-navbar-padding-x: 0.5rem;
+} */
+
+.fixed-top {
+    position: fixed !important;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.navbar {
+    position: relative;
+    padding: 0.5rem 1rem;
+}
+
+.navbar-nav .nav-link {
+    color: rgba(0,0,0,.5) !important;
+    text-decoration: none;
+}
+
+.navbar-nav:hover .nav-link:hover {
+    color: rgba(0, 0, 0, 0.75) !important;
+}
+
 .navbar-brand {
   font-weight: 500;
   /* Create a conic gradient. */

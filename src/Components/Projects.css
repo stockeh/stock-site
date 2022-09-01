@@ -42,6 +42,7 @@
 
 .card-header-text {
   color: var(--black);
+  border: transparent;
 }
 
 .card-header-text:hover {

@@ -4,6 +4,7 @@
 
 #navTabs .nav-link:hover {
   color: var(--blue);
+  text-decoration: none;
 }
 
 #navTabs .active {
@@ -12,4 +13,11 @@
 
 #navTabs {
   font-weight: bold;
+}
+
+@media (min-width: 1400px) {
+.container, .container-lg, .container-md, 
+.container-sm, .container-xl, .container-xxl {
+    max-width: 1140px !important;
+}
 }

@@ -12,17 +12,17 @@ import './Projects.css';
 
 function CustomCard({ card_id, item, show }) {
   return (
-    <Card className='text-left'>
+    <Card className='text-start'>
       <Card.Header className='card-header'>
         <button
-          className='btn card-header-text text-left'
-          type='button'
-          data-toggle='collapse'
-          data-target={'#collapse' + card_id}
+          className='btn card-header-text text-start'
+          data-bs-toggle='collapse'
+          href={'#collapse' + card_id}
         >
           <h5>{item.title}</h5>
         </button>
       </Card.Header>
+
       <div id={'collapse' + card_id} className={'collapse' + show}>
         <div className='card-body'>
           <p className='card-text'>{item.desc}</p>
@@ -50,8 +50,8 @@ function CustomCard({ card_id, item, show }) {
 function Category({ section, data }) {
   return (
     <Row id={section.replace(/\s+/g, '')}>
-      <Col lg={3} sm={12}>
-        <div className='line' /> {/*d-none d-lg-block*/}
+      <Col lg={3} sm={12} style={{ position: 'relative' }}>
+        <div className='line' />
         <div className='sticky-category sticky-top'>
           <div className='word'>
             <h3>{section}</h3>

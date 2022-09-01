@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Container, Nav } from 'react-bootstrap';
-
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
 import Navigation from './Components/Navigation';
 import Banner from './Components/Banner';
 
@@ -19,7 +19,7 @@ function App() {
   return (
     <div>
       <Navigation />
-      <Container className='app'>
+      <Container fluid='sm'>
         <Banner />
         <Nav
           fill
@@ -29,7 +29,7 @@ function App() {
           onSelect={(eventKey) => setTab(eventKey)}
         >
           <Nav.Item>
-            <Nav.Link eventKey='pub'>Literature</Nav.Link>
+            <Nav.Link eventKey='pub'>Papers</Nav.Link>
           </Nav.Item>
           <Nav.Item>
             <Nav.Link eventKey='pro'>Projects</Nav.Link>
