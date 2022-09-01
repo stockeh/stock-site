@@ -1,0 +1,28 @@
+img[alt$='>'] {
+    float: right;
+}
+  
+img[alt$='<'] {
+    float: left;
+}
+
+img[alt$='><'] {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    float: none !important;
+}
+
+/* to align equation href */
+:target:before {
+    content:"";
+    display:block;
+    height:110px; /* fixed header height*/
+    margin:-110px 0 0; /* negative fixed header height */
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+    text-align: left;
+}

@@ -35,7 +35,7 @@ function App() {
             <Nav.Link eventKey='pro'>Projects</Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link eventKey='misc'>Misc.</Nav.Link>
+            <Nav.Link eventKey='misc'>Blogs</Nav.Link>
           </Nav.Item>
         </Nav>
         <br /> <br />
