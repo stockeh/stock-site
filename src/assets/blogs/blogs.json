@@ -1,6 +1,8 @@
 [
   {
-    "title": "Trainable Wavelet Neural Network for Non-Stationary Signals",
-    "md": "page.md"
+    "title": "Example Blog Post",
+    "description": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer",
+    "src": "progressive_cascade_nets_1.png",
+    "dir": "example-blog"
   }
 ]

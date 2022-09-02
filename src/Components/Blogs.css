@@ -1,0 +1,15 @@
+.blogs-cardimg {
+  padding: 10px;
+  width: 100%; 
+  height: 150px; 
+  object-fit: cover; 
+}
+
+.blogs-card-link {
+    color: var(--black) !important;
+}
+
+.blogs-card-link:hover {
+    color: var(--blue) !important;
+    text-decoration: none !important;
+}

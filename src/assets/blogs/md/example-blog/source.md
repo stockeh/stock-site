@@ -55,4 +55,4 @@ Code: My code *caption*
 
 
 You can use table for this. It works fine.
-![alt ><](files/progressive_cascade_nets_1.png)
+![alt ><](progressive_cascade_nets_1.png)

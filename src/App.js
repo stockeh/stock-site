@@ -2,12 +2,13 @@ import React from 'react';
 
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
+
 import Navigation from './Components/Navigation';
 import Banner from './Components/Banner';
 
 import Literature from './Components/Literature';
 import Projects from './Components/Projects';
-import Miscellaneous from './Components/Miscellaneous';
+import Blogs from './Components/Blogs';
 
 import Footer from './Components/Footer';
 
@@ -35,13 +36,13 @@ function App() {
             <Nav.Link eventKey='pro'>Projects</Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link eventKey='misc'>Blogs</Nav.Link>
+            <Nav.Link eventKey='blo'>Blogs</Nav.Link>
           </Nav.Item>
         </Nav>
         <br /> <br />
         {tab === 'pub' ? <Literature /> : null}
         {tab === 'pro' ? <Projects /> : null}
-        {tab === 'misc' ? <Miscellaneous /> : null}
+        {tab === 'blo' ? <Blogs /> : null}
       </Container>
       <Footer />
     </div>
