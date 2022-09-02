@@ -6,8 +6,12 @@ import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
 
 import Container from 'react-bootstrap/Container';
+import Button from 'react-bootstrap/Button';
+import { BsArrowLeft } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 
 import Navigation from './Navigation';
+import Banner from './Banner';
 import Footer from './Footer';
 
 import './Blogpage.css';
@@ -29,10 +33,16 @@ function Blogpage({ dir }) {
     <div>
       <Navigation />
       <Container fluid='sm'>
-        <br />
-        <br />
-        <br />
-        <br />
+        <Banner desc={false} />
+        <Link to='/blogs'>
+          <Button id='blog-button'>
+            <div style={{ display: 'inline-flex', alignItems: 'center' }}>
+              <BsArrowLeft />
+              &nbsp;Other Blogs
+            </div>
+          </Button>
+        </Link>
+
         <ReactMarkdown
           className='react-markdown'
           children={content}
@@ -41,9 +51,10 @@ function Blogpage({ dir }) {
             [
               rehypeKatex,
               {
+                // TODO: fix this to anchor with react-router
                 trust: (context) => ['\\htmlId', '\\href'].includes(context.command),
                 macros: {
-                  '\\eqref': '\\href{###1}{\\text{Equation (#1)}}',
+                  '\\eqref': '\\href{/###1}{\\text{Equation (#1)}}',
                   '\\ref': '\\href{###1}{\\text{#1}}',
                   '\\label': '\\htmlId{#1}{}',
                 },
@@ -53,7 +64,6 @@ function Blogpage({ dir }) {
           ]}
           components={{
             img: ({ node, ...props }) => (
-              //   console.log(`../assets/blogs/media/${node.properties.src}`),
               // https://github.com/remarkjs/react-markdown/issues/265
               <img
                 alt={node.properties.alt}

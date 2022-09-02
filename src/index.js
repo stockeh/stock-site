@@ -3,7 +3,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 
 import blogs from './assets/blogs/blogs.json';
 import Blogpage from './Components/Blogpage';
@@ -15,14 +15,16 @@ const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
 
 root.render(
-  <BrowserRouter basename={process.env.PUBLIC_URL}>
-    <StrictMode>
+  <StrictMode>
+    <HashRouter>
       <Routes>
-        <Route path='/' element={<App />} />
+        <Route exact path='/' element={<App page='papers' />} />
+        <Route exact path='/projects' element={<App page='projects' />} />
+        <Route exact path='/blogs' element={<App page='blogs' />} />
         {blogs.map((item, idx) => (
-          <Route key={idx} path={item.dir} element={<Blogpage dir={item.dir} />} />
+          <Route key={idx} path={'/blogs/' + item.dir} element={<Blogpage dir={item.dir} />} />
         ))}
       </Routes>
-    </StrictMode>
-  </BrowserRouter>
+    </HashRouter>
+  </StrictMode>
 );

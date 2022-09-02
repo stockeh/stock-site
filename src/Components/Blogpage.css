@@ -22,7 +22,20 @@ img[alt$='><'] {
     margin:-110px 0 0; /* negative fixed header height */
 }
 
+#blog-button {
+ color: var(--orange) !important;
+ border: none;
+ background-color: transparent;
+ padding: 0;
+ margin: 0 0 10px 0;
+}
+
+#blog-button:hover {
+    color: rgba(0, 0, 0, 0.75) !important;
+}
+
 .react-markdown h1, .react-markdown h2, .react-markdown h3,
 .react-markdown h4, .react-markdown h5, .react-markdown h6 {
     text-align: left;
 }
+

@@ -7,7 +7,7 @@ import './Navigation.css';
 function Navigation() {
   return (
     <Navbar fixed='top' expand='md' className='nav-bg'>
-      <Navbar.Brand href={process.env.PUBLIC_URL}>STOCK</Navbar.Brand>
+      <Navbar.Brand href='.'>STOCK</Navbar.Brand>
       <Navbar.Toggle aria-controls='collapse-navbar-nav' />
       <Navbar.Collapse className='justify-content-end' id='collapse-navbar-nav'>
         <Nav className='ml-auto'>

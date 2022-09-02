@@ -1,18 +1,17 @@
-#navTabs .nav-link {
-  color: var(--black);
-}
-
-#navTabs .nav-link:hover {
-  color: var(--blue);
-  text-decoration: none;
-}
-
-#navTabs .active {
-  color: var(--blue);
-}
-
-#navTabs {
+#nav-tab-buttons  {
   font-weight: bold;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+#nav-tab-buttons:hover {
+  color: var(--blue) !important;
+  text-decoration: none;
+  border-top-color: lightgray !important;
+  border-left-color: lightgray !important;
+  border-right-color: lightgray !important;
 }
 
 @media (min-width: 1400px) {
