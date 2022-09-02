@@ -22,7 +22,7 @@ img[alt$='><'] {
     margin:-110px 0 0; /* negative fixed header height */
 }
 
-h1, h2, h3,
-h4, h5, h6 {
+.react-markdown h1, .react-markdown h2, .react-markdown h3,
+.react-markdown h4, .react-markdown h5, .react-markdown h6 {
     text-align: left;
 }

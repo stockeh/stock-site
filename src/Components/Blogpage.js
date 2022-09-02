@@ -34,6 +34,7 @@ function Blogpage({ dir }) {
         <br />
         <br />
         <ReactMarkdown
+          className='react-markdown'
           children={content}
           remarkPlugins={[remarkMath]}
           rehypePlugins={[

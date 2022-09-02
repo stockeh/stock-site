@@ -15,7 +15,7 @@ const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
 
 root.render(
-  <BrowserRouter>
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
     <StrictMode>
       <Routes>
         <Route path='/' element={<App />} />

@@ -33,7 +33,11 @@ function References({ data }) {
             <br />
           </Col>
           <Col lg={4} sm={8}>
-            <img alt={item.logo} className='img-fluid' src={item.logo} />
+            <img
+              alt={item.logo}
+              className='img-fluid'
+              src={require(`../assets/literature/media/${item.logo}`)}
+            />
           </Col>
         </Row>
       ))}
