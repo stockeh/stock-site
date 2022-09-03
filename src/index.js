@@ -1,20 +1,30 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
-import React from 'react';
-import ReactDOM from 'react-dom';
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { HashRouter, Routes, Route } from 'react-router-dom';
+
+import blogs from './assets/blogs/blogs.json';
+import Blogpage from './Components/Blogpage';
+
 import './index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+const rootElement = document.getElementById('root');
+const root = createRoot(rootElement);
+
+root.render(
+  <StrictMode>
+    <HashRouter>
+      <Routes>
+        <Route exact path='/' element={<App page='papers' />} />
+        <Route exact path='/projects' element={<App page='projects' />} />
+        <Route exact path='/blogs' element={<App page='blogs' />} />
+        {blogs.map((item, idx) => (
+          <Route key={idx} path={'/blogs/' + item.dir} element={<Blogpage dir={item.dir} />} />
+        ))}
+      </Routes>
+    </HashRouter>
+  </StrictMode>
 );
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
