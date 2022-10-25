@@ -16,6 +16,7 @@ import './Weather.css';
 
 function Weather() {
   const [data, setData] = useState([]);
+  const [status, setStatus] = useState(true);
   const [loading, setLoading] = useState(true);
 
   const lat = 40.585258;
@@ -26,12 +27,30 @@ function Weather() {
 
   useEffect(() => {
     fetch(apiUrl)
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) {
+          setStatus(res.ok);
+        } else {
+          return res.json();
+        }
+      })
       .then((data) => setData(data))
-      .then(() => setLoading(false));
+      .then(() => setLoading(false))
+      .catch((err) => {
+        console.log('error, no wx.');
+      });
   }, [apiUrl]);
 
-  const getIcon = (cond) => {
+  if (!status) {
+    return <></>;
+  }
+
+  const getIcon = (data) => {
+    if (data.weather.length === 0) {
+      return;
+    }
+    const cond = data.weather[0].main.toLowerCase();
+
     const time = parseInt(
       new Date().toLocaleString('en-US', {
         timeZone: 'America/Denver',
@@ -71,7 +90,7 @@ function Weather() {
         </div>
       ) : (
         <div className='banner-weather'>
-          {getIcon(data.weather[0].main.toLowerCase())}
+          {getIcon(data)}
           <span className='banner-weather-desc'>
             {Number(1.8 * (data.main.temp - 273.15) + 32).toFixed(0)}
             &#8457;, {loc}
