@@ -21,11 +21,18 @@ function References({ data }) {
               <span>&mdash;</span>
             </p>
             <div
+              className='authors'
               dangerouslySetInnerHTML={{
                 __html: item.authors.replace(NAME, '<strong>' + NAME + '</strong>'),
               }}
             />
-            <p className='conf'>{item.conf}</p>
+            <ul className='conf-list'>
+              {item.conf.map((cc, ci) => (
+                <li key={cc.replace(/\s+/g, '') + ci}>
+                  <p className='conf'>{cc}</p>
+                </li>
+              ))}
+            </ul>
             <Button target='_blank' rel='noopener noreferrer' size='sm' href={item.pdf}>
               PDF
             </Button>

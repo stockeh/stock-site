@@ -1,0 +1,25 @@
+.banner-weather {
+    text-align: center;
+    margin-top: -60px;
+    margin-bottom: 30px;
+    color: #686868;
+}
+
+.banner-weather-desc {
+    font-size: small;
+    padding-left: 8px;
+}
+
+.banner-weather-loading {
+    animation: spin-animation 0.5s infinite;
+    display: inline-block;
+  }
+  
+  @keyframes spin-animation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(359deg);
+    }
+  }

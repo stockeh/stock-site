@@ -5,6 +5,8 @@
 
 Scaled Conjugate Gradient (SCG) is an effective full-batch learning algorithms when trained on data that can fit in memory. ImageNet, however, is too large for full-batch optimization, but could we use a large enough batch (e.g. 1024 samples) to get a good representation of the data during optimization?
 
+#### Equations
+
 $$
 \begin{equation}
 g\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
@@ -30,7 +32,7 @@ $$
 \end{equation}
 $$
 
-#### ImageNet
+#### Code
 
 ```bash
 nohup python -u imagenet.py -a alexnet --epochs 9 -b 20000 -o scg --gpu 0 --exp-id 3 > log.out &
@@ -43,7 +45,8 @@ alexnet 0.098 +- 0.000 0.508 +- 0.000 39.770 +- 0.000 65.286 +- 0.000
 
 average 0.098          0.508          39.770          65.286
 ```
+#### Images
 
+![alt](progressive_cascade_nets_1.png)
 
-You can use table for this. It works fine.
-![alt ><](progressive_cascade_nets_1.png)
+hello there

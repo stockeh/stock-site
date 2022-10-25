@@ -34,6 +34,31 @@
     color: rgba(0, 0, 0, 0.75) !important;
 }
 
+.mobile-hr {
+    background: linear-gradient(to right, gray, white 35%);
+    height: 2px;
+    border: 0;
+}
+
+.mobile-navbar-icon {
+    line-height: 0px;
+}
+
+.mobile-navbar-text, .mobile-navbar-icon {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .mobile-navbar-text{
+        padding-left: 8px;
+        display: inline-block;
+    }
+    .mobile-navbar-icon{
+        padding-right: 8px;
+        display: inline-block;
+    }
+}
+
 .navbar-brand {
   font-weight: 500;
   /* Create a conic gradient. */
