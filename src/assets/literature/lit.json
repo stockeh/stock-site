@@ -1,11 +1,20 @@
 [
   {
+    "title": "Attention-Based Scattering Network for Satellite Imagery",
+    "abstract": "Multi-channel satellite imagery, from stacked spectral bands or spatiotemporal data, have meaningful representations for various atmospheric properties. Combining these features in an effective manner to create a performant and trustworthy model is of utmost importance to forecasters. Neural networks show promise, yet suffer from unintuitive computations, fusion of high-level features, and may be limited by the quantity of available data. In this work, we leverage the scattering transform to extract high-level features without additional trainable parameters and introduce a separation scheme to bring attention to independent input channels. Experiments show promising results on estimating tropical cyclone intensity and predicting the occurrence of lightning from satellite imagery.",
+    "authors": "Jason Stock, Charles Anderson",
+    "pdf": "https://arxiv.org/abs/2210.12185",
+    "conference": "In NeurIPS 2022 Workshop Tackling on Climate Change with Machine Learning | AMS 103rd Annual Meeting, 22nd Conference on Artificial Intelligence for Environmental Science",
+    "conf": ["NeurIPS 2022 Climate Change Workshop (Poster)", "AMS AI 2023 (Oral)"],
+    "logo": "atten_scattering_network.png"
+  },
+  {
     "title": "Trainable Wavelet Neural Network for Non-Stationary Signals",
     "abstract": "This work introduces a wavelet neural network to learn a filter-bank specialized to fit non-stationary signals and improve interpretability and performance for digital signal processing. The network uses a wavelet transform as the first layer of a neural network where the convolution is a parameterized function of the complex Morlet wavelet. Experimental results, on both simplified data and atmospheric gravity waves, show the network is quick to converge, generalizes well on noisy data, and outperforms standard network architectures.",
     "authors": "Jason Stock, Charles Anderson",
     "pdf": "https://arxiv.org/abs/2205.03355",
     "conference": "AI for Earth and Space Science Workshop at the International Conference on Learning Representations",
-    "conf": "ICLR 2022 AI4Earth Workshop (Oral)",
+    "conf": ["ICLR 2022 AI4Earth Workshop (Oral)"],
     "logo": "trainable_wavelet_1.png"
   },
   {
@@ -14,7 +23,7 @@
     "authors": "Charles Anderson, Jason Stock, David Anderson",
     "pdf": "https://arxiv.org/abs/2205.06351",
     "conference": "AI for Earth and Space Science Workshop at the International Conference on Learning Representations",
-    "conf": "ICLR 2022 AI4Earth Workshop (Poster)",
+    "conf": ["ICLR 2022 AI4Earth Workshop (Poster)"],
     "logo": "progressive_cascade_nets_1.png"
   },
   {
@@ -23,7 +32,7 @@
     "authors": "Imme Ebert-Uphoff, Ryan Lagerquist, Kyle Hilburn, Yoonjin Lee, Katherine Haynes, Jason Stock, Christina Kumler, Jebb Q. Stewart",
     "pdf": "https://arxiv.org/abs/2106.09757",
     "conference": "arXiv Preprint 2021",
-    "conf": "arXiv Preprint 2021",
+    "conf": ["arXiv Preprint 2021"],
     "logo": "cira_loss_1.png"
   },
   {
@@ -32,7 +41,7 @@
     "authors": "Jason Stock, John Dandy, Imme Ebert-Uphoff, Chuck Anderson, Jack Dostalek, Lewis Grasso, Jon Zeitler, Harry Weinman",
     "pdf": "https://mountainscholar.org/handle/10217/233704",
     "conference": "AMS 101st Annual Meeting, 20th Conference on Artificial Intelligence for Environmental Science.",
-    "conf": "AMS AI 2021 (Oral)",
+    "conf": ["AMS AI 2021 (Oral)"],
     "logo": "soundings_1.png"
   },
   {
@@ -41,7 +50,7 @@
     "authors": "Jason Stock, Tom Cavey",
     "pdf": "https://arxiv.org/abs/2101.02380",
     "conference": "arXiv Preprint 2021",
-    "conf": "arXiv Preprint 2021",
+    "conf": ["arXiv Preprint 2021"],
     "logo": "whos_a_good_boy_1.png"
   },
   {
@@ -50,7 +59,7 @@
     "authors": "Jason Stock, Andy Dolan, Tom Cavey",
     "pdf": "https://arxiv.org/abs/2004.03452",
     "conference": "arXiv Preprint 2020",
-    "conf": "arXiv Preprint 2020",
+    "conf": ["arXiv Preprint 2020"],
     "logo": "robust_1.png"
   }
 ]
