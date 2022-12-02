@@ -9,6 +9,15 @@
     "logo": "atten_scattering_network.png"
   },
   {
+    "title": "An Interpretable Model of Climate Change Using Correlative Learning",
+    "abstract": "Determining changes in global temperature and precipitation that may indicate climate change is complicated by annual variations. One approach for finding potential climate change indicators is to train a model that predicts the year from annual means of global temperatures and precipitations. Such data is available from the CMIP6 ensemble of simulations. Here a two-hidden-layer neural network trained on this data successfully predicts the year. Differences among temperature and precipitation patterns for which the model predicts specific years reveal changes through time. To find these optimal patterns, a new way of interpreting what the neural network has learned is explored. Alopex, a stochastic correlative learning algorithm, is used to find optimal temperature and precipitation maps that best predict a given year. These maps are compared over multiple years to show how temperature and precipitations patterns indicative of each year change over time.",
+    "authors": "Charles Anderson, Jason Stock",
+    "pdf": "https://arxiv.org/",
+    "conference": "In NeurIPS 2022 Workshop Tackling on Climate Change with Machine Learning | AMS 103rd Annual Meeting, 22nd Conference on Artificial Intelligence for Environmental Science",
+    "conf": ["NeurIPS 2022 Climate Change Workshop (Poster)"],
+    "logo": "cmip6_alopex.png"
+  },
+  {
     "title": "Trainable Wavelet Neural Network for Non-Stationary Signals",
     "abstract": "This work introduces a wavelet neural network to learn a filter-bank specialized to fit non-stationary signals and improve interpretability and performance for digital signal processing. The network uses a wavelet transform as the first layer of a neural network where the convolution is a parameterized function of the complex Morlet wavelet. Experimental results, on both simplified data and atmospheric gravity waves, show the network is quick to converge, generalizes well on noisy data, and outperforms standard network architectures.",
     "authors": "Jason Stock, Charles Anderson",
@@ -32,7 +41,7 @@
     "authors": "Imme Ebert-Uphoff, Ryan Lagerquist, Kyle Hilburn, Yoonjin Lee, Katherine Haynes, Jason Stock, Christina Kumler, Jebb Q. Stewart",
     "pdf": "https://arxiv.org/abs/2106.09757",
     "conference": "arXiv Preprint 2021",
-    "conf": ["arXiv Preprint 2021"],
+    "conf": ["AMS AI 2022 (Oral)", "3rd NOAA AI Workshop 2021 (Oral)"],
     "logo": "cira_loss_1.png"
   },
   {
@@ -41,7 +50,7 @@
     "authors": "Jason Stock, John Dandy, Imme Ebert-Uphoff, Chuck Anderson, Jack Dostalek, Lewis Grasso, Jon Zeitler, Harry Weinman",
     "pdf": "https://mountainscholar.org/handle/10217/233704",
     "conference": "AMS 101st Annual Meeting, 20th Conference on Artificial Intelligence for Environmental Science.",
-    "conf": ["AMS AI 2021 (Oral)"],
+    "conf": ["AMS AI 2021 (Oral)", "3rd NOAA AI Workshop 2021 (Oral)"],
     "logo": "soundings_1.png"
   },
   {
