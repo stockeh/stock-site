@@ -12,7 +12,7 @@
     "title": "An Interpretable Model of Climate Change Using Correlative Learning",
     "abstract": "Determining changes in global temperature and precipitation that may indicate climate change is complicated by annual variations. One approach for finding potential climate change indicators is to train a model that predicts the year from annual means of global temperatures and precipitations. Such data is available from the CMIP6 ensemble of simulations. Here a two-hidden-layer neural network trained on this data successfully predicts the year. Differences among temperature and precipitation patterns for which the model predicts specific years reveal changes through time. To find these optimal patterns, a new way of interpreting what the neural network has learned is explored. Alopex, a stochastic correlative learning algorithm, is used to find optimal temperature and precipitation maps that best predict a given year. These maps are compared over multiple years to show how temperature and precipitations patterns indicative of each year change over time.",
     "authors": "Charles Anderson, Jason Stock",
-    "pdf": "https://arxiv.org/",
+    "pdf": "https://arxiv.org/abs/2212.04478",
     "conference": "In NeurIPS 2022 Workshop Tackling on Climate Change with Machine Learning | AMS 103rd Annual Meeting, 22nd Conference on Artificial Intelligence for Environmental Science",
     "conf": ["NeurIPS 2022 Climate Change Workshop (Poster)"],
     "logo": "cmip6_alopex.png"
