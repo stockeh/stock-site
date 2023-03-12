@@ -4,13 +4,16 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin-bottom: 100px;
 }
 
 html {
   position: relative;
   min-height: 100%;
 }
+
+.container-sm {
+  padding-bottom: 120px;
+} 
 
 footer {
   position: absolute;
