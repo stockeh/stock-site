@@ -89,6 +89,7 @@ function Blogpage({ setNeedBanner, dir }) {
               <img
                 className='inline-image'
                 alt={alt[0]}
+                id={alt[0]}
                 style={{ maxWidth: `${width}%` }}
                 src={require(`../assets/blogs/md/${dir}/${node.properties.src}`)}
               />
@@ -96,10 +97,15 @@ function Blogpage({ setNeedBanner, dir }) {
           },
           a: ({ node, ...props }) => {
             if (props.href.charAt(0) == '!') {
-              // '/blogs/' + dir +
-              props.href = '#' + props.href.substring(1);
+              // markdown: [test](!some-id)
+              props.href = '#' + props.href.substring(1); // '/blogs/' + dir +
               return <HashLink to={props.href} scroll={scrollWithOffset} {...props} />;
             }
+            // else if (props.href.charAt(0) == '#') {
+            //   // markdown: [1](#some-ref)
+            //   props.children = '[' + props.children + ']';
+            //   return <span id={props.href.substring(1)} {...props} />;
+            // }
             return <a target='_blank' rel='noopener noreferrer' {...props} />;
           },
           //   span: ({ node, ...props }) => {
@@ -116,9 +122,6 @@ function Blogpage({ setNeedBanner, dir }) {
           h6: ({ node, ...props }) => <h6 id={generateSlug(props.children[0])} {...props} />,
         }}
       />
-      <div id='yourAnchorTag'>
-        <p>Linked to here</p>
-      </div>
       <Footer />
     </div>
   );
