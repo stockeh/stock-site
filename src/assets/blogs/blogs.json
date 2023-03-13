@@ -1,9 +1,9 @@
 [
   {
     "title": "Minibatched Scaled Conjugate Gradient with Gradient Accumulation",
-    "description": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer",
+    "description": "An overview of SCG and how gradient accumulation can help optimization when using minibatches for training neural nets.",
     "dir": "zexample-blog",
-    "src": "progressive_cascade_nets_1.png",
+    "src": "taylor_fn.png",
     "private": false
   },
   {
