@@ -1,5 +1,5 @@
 ## Minibatched Scaled Conjugate Gradient with Gradient Accumulation
-*Sep 23, 2022*  
+*Mar 13, 2023*  
 &nbsp;  
 &nbsp;  
 
