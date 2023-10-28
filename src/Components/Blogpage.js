@@ -27,7 +27,7 @@ function Blogpage({ setNeedBanner, dir }) {
         .then((res) => res.text())
         .then((text) => setContent(text))
     );
-  }, [dir]);
+  }, [dir, setNeedBanner]);
 
   const generateSlug = (string) => {
     let str = string.replace(/^\s+|\s+$/g, '');
@@ -96,7 +96,7 @@ function Blogpage({ setNeedBanner, dir }) {
             );
           },
           a: ({ node, ...props }) => {
-            if (props.href.charAt(0) == '!') {
+            if (props.href.charAt(0) === '!') {
               // markdown: [test](!some-id)
               props.href = '#' + props.href.substring(1); // '/blogs/' + dir +
               return <HashLink to={props.href} scroll={scrollWithOffset} {...props} />;
@@ -106,20 +106,46 @@ function Blogpage({ setNeedBanner, dir }) {
             //   props.children = '[' + props.children + ']';
             //   return <span id={props.href.substring(1)} {...props} />;
             // }
-            return <a target='_blank' rel='noopener noreferrer' {...props} />;
+            return (
+              <a target='_blank' rel='noopener noreferrer' {...props}>
+                {props.children[0]}
+              </a>
+            );
           },
           //   span: ({ node, ...props }) => {
           //     console.log(props);
           //     return <span {...props} />;
           //   },
-          h1: ({ node, ...props }) => <h1 id={generateSlug(props.children[0])} {...props} />,
-          h2: ({ node, ...props }) => (
-            <h2 className='blog-title' id={generateSlug(props.children[0])} {...props} />
+          h1: ({ node, ...props }) => (
+            <h1 id={generateSlug(props.children[0])} {...props}>
+              {props.children[0]}
+            </h1>
           ),
-          h3: ({ node, ...props }) => <h3 id={generateSlug(props.children[0])} {...props} />,
-          h4: ({ node, ...props }) => <h4 id={generateSlug(props.children[0])} {...props} />,
-          h5: ({ node, ...props }) => <h5 id={generateSlug(props.children[0])} {...props} />,
-          h6: ({ node, ...props }) => <h6 id={generateSlug(props.children[0])} {...props} />,
+          h2: ({ node, ...props }) => (
+            <h2 className='blog-title' id={generateSlug(props.children[0])} {...props}>
+              {props.children[0]}
+            </h2>
+          ),
+          h3: ({ node, ...props }) => (
+            <h3 id={generateSlug(props.children[0])} {...props}>
+              {props.children[0]}
+            </h3>
+          ),
+          h4: ({ node, ...props }) => (
+            <h4 id={generateSlug(props.children[0])} {...props}>
+              {props.children[0]}
+            </h4>
+          ),
+          h5: ({ node, ...props }) => (
+            <h5 id={generateSlug(props.children[0])} {...props}>
+              {props.children[0]}
+            </h5>
+          ),
+          h6: ({ node, ...props }) => (
+            <h6 id={generateSlug(props.children[0])} {...props}>
+              {props.children[0]}
+            </h6>
+          ),
         }}
       />
       <Footer />

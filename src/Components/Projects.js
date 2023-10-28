@@ -52,9 +52,11 @@ function Category({ section, data }) {
     <Row id={section.replace(/\s+/g, '')}>
       <Col lg={3} sm={12} style={{ position: 'relative' }}>
         <div className='line' />
-        <div className='sticky-category sticky-top'>
-          <div className='word'>
-            <h3>{section}</h3>
+        <div className='sticky-parent'>
+          <div className='sticky-category'>
+            <div className='word'>
+              <h3>{section}</h3>
+            </div>
           </div>
         </div>
       </Col>

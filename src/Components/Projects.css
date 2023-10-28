@@ -1,7 +1,13 @@
+.sticky-parent {
+    overflow: unset;
+    position: unset;
+  }
+
 .sticky-category {
   top: 4rem;
   z-index: 2;
   margin-bottom: 2rem;
+  position: sticky;
 }
 
 .line {
