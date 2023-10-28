@@ -1,16 +1,16 @@
 [
   {
-    "title": "Example Blog Post",
-    "description": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer",
-    "dir": "zexample-blog",
-    "src": "progressive_cascade_nets_1.png",
+    "title": "Minibatched Scaled Conjugate Gradient with Gradient Accumulation",
+    "description": "An overview of SCG and how gradient accumulation can help optimization when using minibatches for training neural nets.",
+    "dir": "scgaccum",
+    "src": "taylor_fn.png",
     "private": false
   },
   {
-    "title": "Example Blog Post",
+    "title": "Discovering Symbolic Pathways in Neural Networks",
     "description": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer",
-    "dir": "zexample-blog",
-    "src": "progressive_cascade_nets_1.png",
+    "dir": "symnets",
+    "src": "taylor_fn.png",
     "private": true
   }
 ]

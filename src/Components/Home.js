@@ -38,7 +38,7 @@ function Navv({ to, name }) {
 }
 
 function Home({ setNeedBanner, page }) {
-  useEffect(() => setNeedBanner(true), []);
+  useEffect(() => setNeedBanner(true), [setNeedBanner]);
   return (
     <div>
       <div className='btn-group d-flex' role='group' aria-label='...'>

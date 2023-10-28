@@ -15,7 +15,9 @@
     "react-icons": "^4.4.0",
     "react-markdown": "^8.0.3",
     "react-router-dom": "^6.3.0",
+    "react-router-hash-link": "^2.4.3",
     "rehype-katex": "^6.0.2",
+    "remark-gfm": "^3.0.1",
     "remark-math": "^5.1.1",
     "remark-parse": "^10.0.1"
   },

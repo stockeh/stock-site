@@ -7,6 +7,12 @@ img {
     float: none !important;
 }
 
+/* .blog-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
 /* to align equation href */
 :target:before {
     content:"";
@@ -36,3 +42,26 @@ img {
     padding-bottom: 10px;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+body {
+    position: relative;
+    margin-bottom: 0px;
+}
+
+
+/* Only apply CSS when screen > sm */
+@media only screen and (max-width: 992px) {
+    .inline-image {
+      width: 100%;
+      max-width: unset !important;
+    }
+}
+
+.blog-page {
+    text-align: justify;
+}
+.math-display {
+    overflow-x: scroll;
+}

@@ -1,5 +1,23 @@
 [
   {
+    "title": "Memory-Based Sequential Attention",
+    "abstract": "Computational models of sequential attention often use recurrent neural networks, which may lead to information loss over accumulated glimpses and an inability to dynamically reweigh glimpses at each step. Addressing the former limitation should result in greater performance, while addressing the latter should enable greater interpretability. In this work, we propose a biologically-inspired model of sequential attention for image classification. Specifically, our algorithm contextualizes the history of observed locations from within an image to inform future gaze points, akin to scanpaths in the biological visual system. We achieve this by using a transformer-based memory module coupled with a reinforcement learning-based learning algorithm, improving both task performance and model interpretability. In addition to empirically evaluating our approach on classical vision tasks, we demonstrate the robustness of our algorithm to different initial locations in the image and provide interpretations of sampled locations from within the trajectory.",
+    "authors": "Jason Stock, Charles Anderson",
+    "pdf": "https://proceedings.mlr.press",
+    "conference": "In NeurIPS 2023 Gaze Meets ML | Proceedings of Machine Learning Research 2024",
+    "conf": ["NeurIPS 2023; PMLR Gaze Meets ML Workshop (Oral)"],
+    "logo": "mem-seq-attn.png"
+  },
+  {
+    "title": "Exploring the Use of Machine Learning to Improve Vertical Profiles of Temperature and Moisture",
+    "abstract": "Vertical profiles of temperature and dewpoint are useful in predicting deep convection that leads to severe weather which threatens property and lives. Currently, forecasters rely on observations from radiosonde launches and numerical weather prediction (NWP) models. Radiosonde observations are, however, temporally and spatially sparse, and NWP models contain inherent errors that influence short-term predictions of high impact events. This work explores using machine learning (ML) to postprocess NWP model forecasts, combining them with satellite data to improve vertical profiles of temperature and dewpoint. We focus on different ML architectures, loss functions, and input features to optimize predictions. Because we are predicting vertical profiles at 256 levels in the atmosphere, this work provides a unique perspective at using ML for 1-D tasks. Compared to baseline profiles from the Rapid Refresh (RAP), ML predictions offer the largest improvement for dewpoint, particularly in the mid- and upper-atmosphere. Temperature improvements are modest, but CAPE values are improved by up to 40%. Feature importance analyses indicate that the ML models are primarily improving incoming RAP biases. While additional model and satellite data offer some improvement to the predictions, architecture choice is more important than feature selection in fine-tuning the results. Our proposed deep residual UNet performs the best by leveraging spatial context from the input RAP profiles; however, the results are remarkably robust across model architecture. Further, uncertainty estimates for every level are well-calibrated and can provide useful information to forecasters.",
+    "authors": "Katherine Haynes, Jason Stock, Jack Dostalek, Charles Anderson, Imme Ebert-Uphoff",
+    "pdf": "https://www.ametsoc.org/index.cfm/ams/publications/journals/artificial-intelligence-for-the-earth-systems/",
+    "conference": "Artificial Intelligence for the Earth Systems (AIES)",
+    "conf": ["AIES 2023 (Journal)"],
+    "logo": "vertical_profile_uq.png"
+  },
+  {
     "title": "Attention-Based Scattering Network for Satellite Imagery",
     "abstract": "Multi-channel satellite imagery, from stacked spectral bands or spatiotemporal data, have meaningful representations for various atmospheric properties. Combining these features in an effective manner to create a performant and trustworthy model is of utmost importance to forecasters. Neural networks show promise, yet suffer from unintuitive computations, fusion of high-level features, and may be limited by the quantity of available data. In this work, we leverage the scattering transform to extract high-level features without additional trainable parameters and introduce a separation scheme to bring attention to independent input channels. Experiments show promising results on estimating tropical cyclone intensity and predicting the occurrence of lightning from satellite imagery.",
     "authors": "Jason Stock, Charles Anderson",
