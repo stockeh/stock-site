@@ -29,6 +29,11 @@ function App() {
               />
               <Route
                 exact
+                path='/experience'
+                element={<Home setNeedBanner={setNeedBanner} page='experience' />}
+              />
+              <Route
+                exact
                 path='/projects'
                 element={<Home setNeedBanner={setNeedBanner} page='projects' />}
               />

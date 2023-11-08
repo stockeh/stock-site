@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="Layer_1"
+   data-name="Layer 1"
+   viewBox="0 0 48.319775 38.760841"
+   version="1.1"
+   sodipodiDocname="boeing.svg"
+   width="48.319775"
+   height="38.760841"
+   xmlnsInkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlnsSodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlnsSvg="http://www.w3.org/2000/svg">
+  <sodipodiNamedview
+     id="namedview5"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscapeShowpageshadow="2"
+     inkscapePageopacity="0.0"
+     inkscapePagecheckerboard="0"
+     inkscapeDeskcolor="#d1d1d1" />
+  <defs
+     id="defs1">
+    <style
+       id="style1">.cls-2{fill:#0033a1;}</style>
+  </defs>
+  <title
+     id="title1">boeing_logo</title>
+  <path
+     class="cls-2"
+     d="M 26.485202,23.55 A 13.899394,13.54 0 0 0 21.56806,6.55 C 23.795659,4.32 26.208035,2.11 28.753862,0 A 62.61913,61 0 0 0 20.325943,5.85 13.899394,13.54 0 0 0 3.3571853,26.68 c -2.65874667,5.61 -3.07962935,10.11 -0.7801728,11.63 2.5150307,1.63 7.9762405,-1.33 11.2919745,-6.14 0,0 -5.0711232,4.45 -7.853055,3.43 C 4.301605,34.97 4.301605,32.41 5.707969,28.75 a 13.899394,13.54 0 0 0 17.985036,-1.28 l 0.49274,0.9 C 30.24235,27.89 48.319774,27.42 48.319774,27.42 48.278712,26.59 36.30922,27.39 26.485202,23.55 Z M 1.6633892,17.84 A 12.236394,11.92 0 0 1 18.960641,7 66.643179,64.92 0 0 0 4.1681544,25.07 12.174801,11.86 0 0 1 1.6633892,17.84 Z M 13.889518,29.75 A 12.174801,11.86 0 0 1 6.3238949,27.2 C 8.7465367,21.88 13.673944,14.74 20.397801,7.76 a 12.226129,11.91 0 0 1 4.547586,15.15 22.337578,21.76 0 0 1 -5.810234,-3.69 l 3.68529,6.74 a 12.185067,11.87 0 0 1 -8.930925,3.79 z"
+     id="path1"
+     style="stroke-width:1.01318" />
+</svg>

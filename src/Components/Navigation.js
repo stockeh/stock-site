@@ -2,6 +2,7 @@ import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import { FaInstagram, FaGithub } from 'react-icons/fa';
 import { FiMail } from 'react-icons/fi';
+import { FaGraduationCap } from 'react-icons/fa6';
 
 import './Navigation.css';
 
@@ -18,6 +19,13 @@ function Navigation() {
               <FiMail />
             </span>
             Contact
+          </Nav.Link>
+          <Nav.Link
+            className='icon-adjustment'
+            href='https://scholar.google.com/citations?user=WlLkqJUAAAAJ&hl=en'
+          >
+            <FaGraduationCap />
+            <span className='mobile-navbar-text'>Google Scholar</span>
           </Nav.Link>
           <Nav.Link className='icon-adjustment' href='https://github.com/stockeh'>
             <FaGithub />
