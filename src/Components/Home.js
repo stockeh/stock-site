@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import Literature from './Literature';
+import Experience from './Experience';
 import Projects from './Projects';
 import Blogs from './Blogs';
 
@@ -43,11 +44,13 @@ function Home({ setNeedBanner, page }) {
     <div>
       <div className='btn-group d-flex' role='group' aria-label='...'>
         <Navv to='/' name='Papers' />
+        <Navv to='/experience' name='Experience' />
         <Navv to='/projects' name='Projects' />
         <Navv to='/blogs' name='Blogs' />
       </div>
       <br /> <br />
       {page === 'papers' ? <Literature /> : null}
+      {page === 'experience' ? <Experience /> : null}
       {page === 'projects' ? <Projects /> : null}
       {page === 'blogs' ? <Blogs /> : null}
     </div>
