@@ -91,11 +91,10 @@ function Experience() {
           position: 'Graduate Research Assistant',
           description: (
             <div>
-              Exploring interpretable and trustworthy AI methods for weather, climate, and coastal
-              oceanography. Fundamental research in machine learning, surrounding attention-based
-              neural networks and explainable AI. Applications in radar prediction, tropical
-              cyclones intensity estimation, correcting numerical weather prediction, and finding
-              indicators of climate change.
+              Fundamental research in machine learning, surrounding attention-based neural networks
+              and explainable AI. Applications in radar prediction, tropical cyclones intensity
+              estimation, correcting numerical weather prediction, and finding indicators of climate
+              change.
             </div>
           ),
         }}
