@@ -1,8 +1,34 @@
+.weather-wrapper {
+  position: relative;
+  z-index: 3;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;  
+  }
+}
+
+.advanced-forecast {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+}
+
 .banner-weather {
     text-align: center;
     margin-top: -60px;
     margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
     color: #686868;
+    position: relative;
+    width: fit-content;
 }
 
 .banner-weather-desc {
