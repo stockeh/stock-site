@@ -2,6 +2,7 @@ import { StrictMode, useState } from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import blogs from './assets/blogs/blogs.json';
+import { createTheme } from '@mui/material/styles';
 
 import Home from './Components/Home';
 import Blogpage from './Components/Blogpage';
@@ -10,12 +11,25 @@ import Banner from './Components/Banner';
 import Footer from './Components/Footer';
 
 import './App.css';
+import { ThemeProvider } from '@emotion/react';
 
 function App() {
   const [needBanner, setNeedBanner] = useState(true);
+  const theme = createTheme({
+    typography: {
+      fontFamily: [
+        '"Helvetica Neue"',
+        'Arial',
+        'sans-serif',
+        '"Apple Color Emoji"',
+        '"Segoe UI Emoji"',
+        '"Segoe UI Symbol"',
+      ].join(','),
+    },
+  });
 
   return (
-    <div>
+    <ThemeProvider theme={theme}>
       <Navigation />
       <Container fluid='sm'>
         <Banner desc={needBanner} />
@@ -54,7 +68,7 @@ function App() {
         </StrictMode>
       </Container>
       <Footer />
-    </div>
+    </ThemeProvider>
   );
 }
 
