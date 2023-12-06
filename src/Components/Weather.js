@@ -41,7 +41,7 @@ const useMousePosition = (el) => {
 function Weather() {
   const [data, setData] = useState(null);
   const [status, setStatus] = useState(true);
-  const [advancedVisible, setAdvancedVisible] = useState(true);
+  const [advancedVisible, setAdvancedVisible] = useState(false);
   const [focusedTime, setFocusedTime] = useState(0);
   const [contentMargin, setContentMargin] = useState(0);
   const contentRef = useRef(null);
@@ -126,10 +126,11 @@ function Weather() {
         </div>
       ) : (
         <div className='weather-wrapper'
-        // onMouseLeave={() => setAdvancedVisible(false)}
+        onMouseLeave={() => setAdvancedVisible(false)}
         >
           <div className='banner-weather'
             onMouseEnter={() => setAdvancedVisible(true)}
+            onClick={() => setAdvancedVisible(!advancedVisible)}
           >
             {getIcon(data[0].weather[0].main.toLowerCase())}
             <span className='banner-weather-desc'>
