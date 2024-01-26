@@ -4,8 +4,8 @@ import { ImSpinner2 } from 'react-icons/im';
 import { TbDroplet } from "react-icons/tb";
 import { FaLocationArrow } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
-import { LineChart, CartesianGrid, XAxis, YAxis, Tooltip, Line } from 'recharts';
-import { Card, CardContent, Box, Typography, Stack } from '@mui/material';
+import { ResponsiveContainer, LineChart, CartesianGrid, XAxis, YAxis, Tooltip, Line } from 'recharts';
+import { Card, CardContent, Box, Typography, Stack, Grid } from '@mui/material';
 import moment from 'moment';
 
 import './Weather.css';
@@ -151,7 +151,21 @@ function Weather() {
                     opacity: 0,
                   }}
                 >
-                  <Card sx={{ minWidth: 275, background: '#fff' }}>
+                  <Card
+                      sx={{
+                        background: '#fff',
+                        // Apply responsive minWidth using @media queries
+                        '@media (min-width: 375px)': {
+                          minWidth: 375,
+                        },
+                        '@media (min-width: 390px)': {
+                          minWidth: 390,
+                        },
+                        '@media (min-width: 430px)': {
+                          minWidth: 430,
+                        },
+                      }}
+                    >
                     <CardContent ref={contentRef}>
                       <Box sx={{
                         width: 'fit-content',
@@ -164,16 +178,16 @@ function Weather() {
                         </Typography>
                         {focusedTime === 0 ? (
                           <Stack sx={{ mb: 1.5 }} direction={'row'} alignItems={'center'}>
-                          <Typography sx={{ mr: 1, color: 'rgba(0, 0, 0, 0.6)' }}>
+                          <Typography color="text.secondary" sx={{ mr: 1 }}>
                             H: {getFahrenheit(data[focusedTime].main.temp_max)}&deg; L: {getFahrenheit(data[focusedTime].main.temp_min)}&deg;
                           </Typography>
-                          <TbDroplet style={{
+                          <TbDroplet color="text.secondary" style={{
                             color: 'rgba(0, 0, 0, 0.6)'
                           }} />
-                          <Typography sx={{ color: 'rgba(0, 0, 0, 0.6)', ml: 0.5, mr: 1 }}>
+                          <Typography color="text.secondary" sx={{ ml: 0.5, mr: 1 }}>
                             {data[focusedTime].main.humidity}%
                           </Typography>
-                          <Typography variant="body2" color="text.secondary">
+                          <Typography color="text.secondary">
                             {data[focusedTime].wind.speed.toFixed(0)} mph
                             <FaLocationArrow style={{
                               transform: `rotate(${data[focusedTime].wind.deg}deg)`,
@@ -184,16 +198,14 @@ function Weather() {
                         </Stack>
                         ) : (
                           <Stack sx={{ mb: 1.5 }} direction={'row'} justifyContent={'center'}>
-                            <Typography sx={{ color: 'rgba(0, 0, 0, 0.6)' }}>
+                            <Typography color="text.secondary" >
                               {moment(new Date(data[focusedTime].dt * 1000)).format('h A')}
                             </Typography>
                           </Stack>
                         )}
                       </Box>
-                      <Box sx={{ width: '100%'}}>
+                      <ResponsiveContainer width="100%" height={250}>
                         <LineChart
-                          width={400}
-                          height={250}
                           onMouseMove={(state) => {
                             if (state.isTooltipActive) {
                               setFocusedTime(state.activeTooltipIndex);
@@ -212,7 +224,7 @@ function Weather() {
                                 temp: item.main.temp,
                               }
                             })}
-                          margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+                          margin={{ top: 5, right: 30, left: 10, bottom: 5 }}>
                           <CartesianGrid strokeDasharray="3 3" />
                           <XAxis
                             dataKey="time"
@@ -226,18 +238,28 @@ function Weather() {
                             width={5}
                           />
                           <Tooltip content={<></>}/>
-                          <Line type="monotone" dataKey="temp" stroke="var(--orange)" dot={false}/>
+                          <Line type="monotone" dataKey="temp" stroke="var(--orange)" strokeWidth={2.5} dot={false}/>
                         </LineChart>
-                      </Box>
+                      </ResponsiveContainer>
                     </CardContent>
-                    <Stack alignItems={'end'} sx={{
-                      paddingBottom: '5px',
-                      paddingRight: '10px'
-                    }}>
-                      <Typography variant="body2" color="text.secondary">
-                        {lat.toFixed(3)}, {lon.toFixed(3)}
-                      </Typography>
-                    </Stack>
+                    <Grid container>
+                      <Typography variant="body2" color="text.secondary" sx={{
+                          paddingBottom: '5px',
+                          paddingLeft: '10px'
+                        }}>
+                         {moment(new Date(data[focusedTime].dt * 1000)).format('MMM d, YYYY')}
+                      </Typography>                          
+                      <Grid item xs>                                 
+                        <Grid container direction="row-reverse">      
+                        <Typography variant="body2" color="text.secondary" sx={{
+                          paddingBottom: '5px',
+                          paddingRight: '10px'
+                        }}>
+                          {lat.toFixed(3)}, {lon.toFixed(3)}
+                        </Typography>
+                        </Grid>
+                      </Grid>
+                    </Grid>
                   </Card>
                 </motion.div>
               )}
