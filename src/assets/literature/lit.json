@@ -1,9 +1,18 @@
 [
   {
+    "title": "An Investigation of Metrics to Evaluate the Sharpness in AI-Generated Meteorological Imagery",
+    "abstract": "AI-based algorithms are emerging in many meteorological applications that produce imagery as output, including for global weather forecasting models. However, the imagery produced by AI algorithms, especially by convolutional neural networks (CNNs), is often described as too blurry to look realistic, partly because CNNs tend to represent uncertainty as blurriness. This blurriness is undesirable since it might obscure important meteorological features. More complex AI models, such as generative adversarial networks (GANs) and diffusion models, generate images that appear to be sharper, but that sharpness may come at the expense of a decline in other performance criteria, such as accuracy. To choose a good trade-off between sharpness and accuracy for a specific task it is important to quantitatively assess both accuracy and sharpness. While there are numerous well-established measures for accuracy there is a lack of well-established measures for sharpness in meteorological imagery. The purpose of this paper is to fill this gap by 1) exploring a variety of sharpness metrics from other fields, 2) analyzing their suitability for meteorological applications, 3) suggesting protocols for how to use and interpret them, and 4) demonstrating their use for sample meteorological applications using vignettes.",
+    "authors": "Imme Ebert-Uphoff, Lander Ver Hoef, John S. Schreck, Jason Stock, Maria J. Molina, Amy McGovern, Michael Yu, Bill Petzke, Kyle Hilburn, David M. Hall, David J. Gagne, Sam Scheuerman",
+    "pdf": "https://www.ai2es.org/wp-content/uploads/2024/01/Sharpness_paper_draft_v1.pdf",
+    "conference": "NSF AI Institute for Research on Trustworthy AI in Weather, Climate, and Coastal Oceanography",
+    "conf": ["AI2ES (Draft)"],
+    "logo": "sharpness.png"
+  },
+  {
     "title": "Memory-Based Sequential Attention",
     "abstract": "Computational models of sequential attention often use recurrent neural networks, which may lead to information loss over accumulated glimpses and an inability to dynamically reweigh glimpses at each step. Addressing the former limitation should result in greater performance, while addressing the latter should enable greater interpretability. In this work, we propose a biologically-inspired model of sequential attention for image classification. Specifically, our algorithm contextualizes the history of observed locations from within an image to inform future gaze points, akin to scanpaths in the biological visual system. We achieve this by using a transformer-based memory module coupled with a reinforcement learning-based learning algorithm, improving both task performance and model interpretability. In addition to empirically evaluating our approach on classical vision tasks, we demonstrate the robustness of our algorithm to different initial locations in the image and provide interpretations of sampled locations from within the trajectory.",
     "authors": "Jason Stock, Charles Anderson",
-    "pdf": "https://proceedings.mlr.press",
+    "pdf": "https://openreview.net/forum?id=EykfhjYrM0",
     "conference": "In NeurIPS 2023 Gaze Meets ML | Proceedings of Machine Learning Research 2024",
     "conf": ["NeurIPS 2023; PMLR Gaze Meets ML Workshop (Oral)"],
     "logo": "mem-seq-attn.png"

@@ -28,9 +28,9 @@ function Banner({ desc }) {
               >
                 Professor Chuck Anderson
               </a>
-              . My current research interests are in neuro-inspired attention methods, creating
-              interpretable-by-design machine learning algorithms, and modeling weather and climate
-              change. I am currently collaborating with the{' '}
+              . My current research interests are in neuro-inspired attention methods, generative
+              diffusion models, creating interpretable-by-design machine learning algorithms, and
+              modeling weather and climate change. I am currently collaborating with the{' '}
               <a target='_blank' rel='noopener noreferrer' href='https://www.ai2es.org'>
                 NSF AI Institute for Research on Trustworthy AI in Weather, Climate, and Coastal
                 Oceanography (AI2ES)
