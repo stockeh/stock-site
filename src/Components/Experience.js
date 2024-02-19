@@ -24,7 +24,7 @@ function AutoTimelineItem({ data }) {
     <div>
       <TimelineItem>
         <TimelineOppositeContent
-          sx={{ py: '25px' }}
+          sx={{ py: '25px', minWidth: '100px' }}
           align='right'
           variant='body1'
           color='text.secondary'
@@ -62,7 +62,22 @@ function Experience() {
     >
       <AutoTimelineItem
         data={{
-          year: '2023-Current',
+          year: '2019–Current',
+          company: 'Colorado State University',
+          logo: csu,
+          position: 'Graduate Research Assistant',
+          description: (
+            <div>
+              Fundamental research in machine learning, surrounding attention-based neural networks,
+              generative diffusion models, and interpretability, applied to domain-specific weather
+              prediction and climate modeling.
+            </div>
+          ),
+        }}
+      />
+      <AutoTimelineItem
+        data={{
+          year: 'Nov–Feb 2024',
           company: 'NVIDIA',
           logo: nvidia,
           position: 'Research Intern',
@@ -85,23 +100,7 @@ function Experience() {
       />
       <AutoTimelineItem
         data={{
-          year: '2019-Current',
-          company: 'Colorado State University',
-          logo: csu,
-          position: 'Graduate Research Assistant',
-          description: (
-            <div>
-              Fundamental research in machine learning, surrounding attention-based neural networks
-              and explainable AI. Applications in radar prediction, tropical cyclones intensity
-              estimation, correcting numerical weather prediction, and finding indicators of climate
-              change.
-            </div>
-          ),
-        }}
-      />
-      <AutoTimelineItem
-        data={{
-          year: '2018-2019',
+          year: '2018–2019',
           company: 'Boeing',
           logo: boeing,
           position: 'Software Engineer Intern',
