@@ -35,9 +35,10 @@
 }
 
 .mobile-hr {
-    background: linear-gradient(to right, gray, white 35%);
+    background: linear-gradient(to right, gray, white 65%);
     height: 2px;
     border: 0;
+    margin-top: 9px
 }
 
 .mobile-navbar-icon {

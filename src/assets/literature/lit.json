@@ -1,5 +1,15 @@
 [
   {
+    "title": "DiffObs: Generative Diffusion for Global Forecasting of Satellite Observations",
+    "abstract": "This work presents an autoregressive generative diffusion model (DiffObs) to predict the global evolution of daily precipitation, trained on a satellite observational product, and assessed with domain-specific diagnostics. The model is trained to probabilistically forecast day-ahead precipitation. Nonetheless, it is stable for multi-month rollouts, which reveal a qualitatively realistic superposition of convectively coupled wave modes in the tropics. Cross-spectral analysis confirms successful generation of low frequency variations associated with the Madden--Julian oscillation, which regulates most subseasonal to seasonal predictability in the observed atmosphere, and convectively coupled moist Kelvin waves with approximately correct dispersion relationships. Despite secondary issues and biases, the results affirm the potential for a next generation of global diffusion models trained on increasingly sparse, and increasingly direct and differentiated observations of the world, for practical applications in subseasonal and climate prediction.",
+    "authors": "Jason Stock, Jaideep Pathak, Yair Cohen, Mike Pritchard, Piyush Garg, Dale Durran, Morteza Mardani, Noah Brenowitz",
+    "pdf": "https://arxiv.org/abs/2404.06517",
+    "poster": "files/ICLR_2024___DiffObs__Poster.pdf",
+    "conference": "In ICLR 2024 Workshop Tackling on Climate Change with Machine Learning",
+    "conf": ["ICLR 2024 Climate Change Workshop (Poster)"],
+    "logo": "diffobs_wk.png"
+  },
+  {
     "title": "An Investigation of Metrics to Evaluate the Sharpness in AI-Generated Meteorological Imagery",
     "abstract": "AI-based algorithms are emerging in many meteorological applications that produce imagery as output, including for global weather forecasting models. However, the imagery produced by AI algorithms, especially by convolutional neural networks (CNNs), is often described as too blurry to look realistic, partly because CNNs tend to represent uncertainty as blurriness. This blurriness is undesirable since it might obscure important meteorological features. More complex AI models, such as generative adversarial networks (GANs) and diffusion models, generate images that appear to be sharper, but that sharpness may come at the expense of a decline in other performance criteria, such as accuracy. To choose a good trade-off between sharpness and accuracy for a specific task it is important to quantitatively assess both accuracy and sharpness. While there are numerous well-established measures for accuracy there is a lack of well-established measures for sharpness in meteorological imagery. The purpose of this paper is to fill this gap by 1) exploring a variety of sharpness metrics from other fields, 2) analyzing their suitability for meteorological applications, 3) suggesting protocols for how to use and interpret them, and 4) demonstrating their use for sample meteorological applications using vignettes.",
     "authors": "Imme Ebert-Uphoff, Lander Ver Hoef, John S. Schreck, Jason Stock, Maria J. Molina, Amy McGovern, Michael Yu, Bill Petzke, Kyle Hilburn, David M. Hall, David J. Gagne, Sam Scheuerman",
@@ -13,6 +23,7 @@
     "abstract": "Computational models of sequential attention often use recurrent neural networks, which may lead to information loss over accumulated glimpses and an inability to dynamically reweigh glimpses at each step. Addressing the former limitation should result in greater performance, while addressing the latter should enable greater interpretability. In this work, we propose a biologically-inspired model of sequential attention for image classification. Specifically, our algorithm contextualizes the history of observed locations from within an image to inform future gaze points, akin to scanpaths in the biological visual system. We achieve this by using a transformer-based memory module coupled with a reinforcement learning-based learning algorithm, improving both task performance and model interpretability. In addition to empirically evaluating our approach on classical vision tasks, we demonstrate the robustness of our algorithm to different initial locations in the image and provide interpretations of sampled locations from within the trajectory.",
     "authors": "Jason Stock, Charles Anderson",
     "pdf": "https://openreview.net/forum?id=EykfhjYrM0",
+    "poster": "files/neurips23-memory-seq-poster.pdf",
     "conference": "In NeurIPS 2023 Gaze Meets ML | Proceedings of Machine Learning Research 2024",
     "conf": ["NeurIPS 2023; PMLR Gaze Meets ML Workshop (Oral)"],
     "logo": "mem-seq-attn.png"
@@ -49,6 +60,7 @@
     "abstract": "This work introduces a wavelet neural network to learn a filter-bank specialized to fit non-stationary signals and improve interpretability and performance for digital signal processing. The network uses a wavelet transform as the first layer of a neural network where the convolution is a parameterized function of the complex Morlet wavelet. Experimental results, on both simplified data and atmospheric gravity waves, show the network is quick to converge, generalizes well on noisy data, and outperforms standard network architectures.",
     "authors": "Jason Stock, Charles Anderson",
     "pdf": "https://arxiv.org/abs/2205.03355",
+    "poster": "files/stock-cs793-F2021-compressed.pdf",
     "conference": "AI for Earth and Space Science Workshop at the International Conference on Learning Representations",
     "conf": ["ICLR 2022 AI4Earth Workshop (Oral)"],
     "logo": "trainable_wavelet_1.png"
@@ -76,6 +88,7 @@
     "abstract": "Vertical profiles of temperature and moisture as provided by radiosondes are of paramount importance to forecasting convective activity, yet the National Weather Service radiosonde network is spatially coarse and suffers from temporal paucity. Supplementary information generated by numerical weather prediction (NWP) models is invaluable—analysis and forecast profiles are available at a high sampling frequency and horizontal resolution. However, numerical models contain inherent errors and inaccuracies, and many of these errors occur near the surface and influence the short-term...",
     "authors": "Jason Stock, John Dandy, Imme Ebert-Uphoff, Chuck Anderson, Jack Dostalek, Lewis Grasso, Jon Zeitler, Harry Weinman",
     "pdf": "https://mountainscholar.org/handle/10217/233704",
+    "poster": "files/stock-cs793-S2021-compressed.pdf",
     "conference": "AMS 101st Annual Meeting, 20th Conference on Artificial Intelligence for Environmental Science.",
     "conf": ["AMS AI 2021 (Oral)", "3rd NOAA AI Workshop 2021 (Oral)"],
     "logo": "soundings_1.png"

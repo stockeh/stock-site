@@ -33,9 +33,16 @@ function References({ data }) {
                 </li>
               ))}
             </ul>
+            <span>
             <Button target='_blank' rel='noopener noreferrer' size='sm' href={item.pdf}>
-              PDF
+              Paper
             </Button>
+            {item.poster ? (
+              <Button target='_blank' rel='noopener noreferrer' size='sm' href={item.poster}>
+                Poster
+              </Button>
+            ) : null}
+            </span>
             <br />
             <br />
           </Col>

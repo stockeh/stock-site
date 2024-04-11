@@ -36,6 +36,7 @@ div.col-sm-8 {
   color: var(--blue) !important;
   border-color: var(--blue);
   background-color: transparent;
+  margin-right: 5px;
 }
 
 .btn-primary:hover {
