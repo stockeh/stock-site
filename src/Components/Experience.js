@@ -62,7 +62,7 @@ function Experience() {
     >
       <AutoTimelineItem
         data={{
-          year: '2023-Current',
+          year: '2023-2024',
           company: 'NVIDIA',
           logo: nvidia,
           position: 'Research Intern',

@@ -2,7 +2,7 @@ import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import { FaInstagram, FaGithub } from 'react-icons/fa';
 import { FiMail } from 'react-icons/fi';
-import { FaGraduationCap } from 'react-icons/fa6';
+import { FaGraduationCap, FaXTwitter } from 'react-icons/fa6';
 
 import './Navigation.css';
 
@@ -26,6 +26,10 @@ function Navigation() {
           >
             <FaGraduationCap />
             <span className='mobile-navbar-text'>Google Scholar</span>
+          </Nav.Link>
+          <Nav.Link className='icon-adjustment' href='https://twitter.com/itsstock'>
+            <FaXTwitter />
+            <span className='mobile-navbar-text'>Twitter</span>
           </Nav.Link>
           <Nav.Link className='icon-adjustment' href='https://github.com/stockeh'>
             <FaGithub />
