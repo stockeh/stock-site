@@ -7,11 +7,11 @@
   }
   
   #nav-tab-buttons:hover {
-    color: var(--blue) !important;
+    color: var(--mui-palette-info-dark) !important;
     text-decoration: none;
-    border-top-color: lightgray !important;
-    border-left-color: lightgray !important;
-    border-right-color: lightgray !important;
+    border-top-color: var(--mui-palette-text-disabled) !important;
+    border-left-color: var(--mui-palette-text-disabled) !important;
+    border-right-color: var(--mui-palette-text-disabled) !important;
   }
   
   @media (min-width: 1400px) {

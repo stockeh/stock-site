@@ -7,12 +7,6 @@ img {
     float: none !important;
 }
 
-/* .blog-title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-
 /* to align equation href */
 :target:before {
     content:"";
@@ -30,7 +24,7 @@ img {
 }
 
 #blog-button:hover {
-    color: rgba(0, 0, 0, 0.75) !important;
+    color: var(--mui-palette-text-secondary) !important;
 }
 
 .react-markdown h1, .react-markdown h2, .react-markdown h3,

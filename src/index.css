@@ -38,22 +38,22 @@ code {
 }
 
 a:link {
-  color: var(--blue);
+  color: var(--mui-palette-info-dark);
   background-color: transparent;
   text-decoration: none;
 }
 a:visited {
-  color: var(--blue);
+  color: var(--mui-palette-info-dark);
   background-color: transparent;
   text-decoration: none;
 }
 a:hover {
-  color: var(--info);
+  color: var(--mui-palette-info-dark);
   background-color: transparent;
   text-decoration: underline;
 }
 a:active {
-  color: var(--info);
+  color: var(--mui-palette-info-dark);
   background-color: transparent;
   text-decoration: underline;
 }

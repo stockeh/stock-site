@@ -24,10 +24,7 @@ function AutoTimelineItem({ data }) {
     <div>
       <TimelineItem>
         <TimelineOppositeContent
-          sx={{ py: '25px' }}
-          align='right'
-          variant='body1'
-          color='text.secondary'
+          className='experience-timeline-opposite-content'
         >
           {data.year}
         </TimelineOppositeContent>
@@ -35,7 +32,7 @@ function AutoTimelineItem({ data }) {
           <TimelineDot className='timeline-dot' variant='outlined'>
             <img className='timeline-logo' src={data.logo} alt='logo' />
           </TimelineDot>
-          <TimelineConnector />
+          <TimelineConnector id={data.company} className='experience-timeline-connector'/>
         </TimelineSeparator>
         <TimelineContent sx={{ py: '8px', px: 2, paddingBottom: '30px' }}>
           <Typography variant='h6' component='span'>
@@ -62,55 +59,55 @@ function Experience() {
     >
       <AutoTimelineItem
         data={{
-          year: '2023-2024',
+          year: '11.2023 - 02.2024',
           company: 'NVIDIA',
           logo: nvidia,
           position: 'Research Intern',
-          description: <div>Machine learning for global climate and weather modeling.</div>,
+          description: <>Machine learning for global climate and weather modeling.</>,
         }}
       />
       <AutoTimelineItem
         data={{
-          year: 'Summer 2023',
+          year: '05.2023 - 08.2023',
           company: 'Maxar Technologies',
           logo: maxar,
           position: 'Research Intern',
           description: (
-            <div>
+            <>
               Large-scale machine learning to emulate atmospheric compensation, using neural
               networks to correct lightwave scattering as seen in high-resolution satellite imagery.
-            </div>
+            </>
           ),
         }}
       />
       <AutoTimelineItem
         data={{
-          year: '2019-Current',
+          year: '06.2020 - Current',
           company: 'Colorado State University',
           logo: csu,
           position: 'Graduate Research Assistant',
           description: (
-            <div>
+            <>
               Fundamental research in machine learning, surrounding attention-based neural networks
               and explainable AI. Applications in radar prediction, tropical cyclones intensity
               estimation, correcting numerical weather prediction, and finding indicators of climate
               change.
-            </div>
+            </>
           ),
         }}
       />
       <AutoTimelineItem
         data={{
-          year: '2018-2019',
+          year: '06.2018 - 11.2019',
           company: 'Boeing',
           logo: boeing,
           position: 'Software Engineer Intern',
           description: (
-            <div>
+            <>
               Cloud notification system delivering Notice to Air Missions (NOTAMs), implementing
               RESTful APIs utilizing Microsoft Azure with fully automated functional, integration,
               and performance test suites.
-            </div>
+            </>
           ),
         }}
       />
