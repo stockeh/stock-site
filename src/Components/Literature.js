@@ -1,12 +1,14 @@
 import React from 'react';
 import lit from '../assets/literature/lit.json';
 import { Row, Col, Button } from 'react-bootstrap';
+import { useTheme } from '@mui/material/styles';
+
 import './Literature.css';
 
 const MAX_LENGTH = 250;
 const NAME = 'Jason Stock';
 
-function References({ data }) {
+function References({ data, isDarkMode }) {
   return (
     <div>
       {data.map((item, index) => (
@@ -48,6 +50,7 @@ function References({ data }) {
           </Col>
           <Col lg={4} sm={8}>
             <img
+              style={isDarkMode ? { filter: 'invert(93%) saturate(120%) hue-rotate(180deg)'} : {}}
               alt={item.logo}
               className='img-fluid'
               src={require(`../assets/literature/media/${item.logo}`)}
@@ -60,9 +63,11 @@ function References({ data }) {
 }
 
 function Literature() {
+  const theme = useTheme();
+  var isDarkMode = theme.palette.mode === 'dark';
   return (
     <div className='literature-layout'>
-      <References data={lit} />
+      <References data={lit} isDarkMode={isDarkMode}/>
     </div>
   );
 }

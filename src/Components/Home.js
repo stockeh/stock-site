@@ -18,18 +18,18 @@ function Navv({ to, name }) {
       style={({ isActive }) =>
         isActive
           ? {
-              borderTopColor: 'lightgray',
-              borderLeftColor: 'lightgray',
-              borderRightColor: 'lightgray',
+              borderTopColor: 'var(--mui-palette-text-disabled)',
+              borderLeftColor: 'var(--mui-palette-text-disabled)',
+              borderRightColor: 'var(--mui-palette-text-disabled)',
               borderBottomColor: 'transparent',
-              color: '#1c5691',
+              color: 'var(--mui-palette-info-dark)',
             }
           : {
               borderTopColor: 'transparent',
               borderLeftColor: 'transparent',
               borderRightColor: 'transparent',
-              borderBottomColor: 'lightgray',
-              color: '#222831',
+              borderBottomColor: 'var(--mui-palette-text-disabled)',
+              color: 'var(--mui-palette-text-disabled)',
             }
       }
     >

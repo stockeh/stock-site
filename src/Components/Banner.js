@@ -16,9 +16,9 @@ function Banner({ desc }) {
           <Weather />
           <div className='description'>
             <p>
-              <span className='bio'>Bio:</span> I am a Computer Science PhD candidate at{' '}
+              <span className='bio'>Bio:</span> I am a Computer Science PhD candidate at Colorado State University {' '}
               <a target='_blank' rel='noopener noreferrer' href='https://compsci.colostate.edu'>
-                Colorado State University (CSU)
+                (CSU)
               </a>{' '}
               advised by{' '}
               <a
@@ -30,14 +30,14 @@ function Banner({ desc }) {
               </a>
               . My current research interests are in neuro-inspired attention methods, generative
               diffusion models, creating interpretable-by-design machine learning algorithms, and
-              modeling weather and climate change. I am currently collaborating with the{' '}
+              modeling weather and climate change. I am currently collaborating with the NSF AI Institute for Research on Trustworthy AI in Weather, Climate, and Coastal
+                Oceanography{' '}
               <a target='_blank' rel='noopener noreferrer' href='https://www.ai2es.org'>
-                NSF AI Institute for Research on Trustworthy AI in Weather, Climate, and Coastal
-                Oceanography (AI2ES)
+                (AI2ES)
               </a>{' '}
-              and the{' '}
+              and the Cooperative Institute for Research in the Atmosphere{' '}
               <a target='_blank' rel='noopener noreferrer' href='https://www.cira.colostate.edu'>
-                Cooperative Institute for Research in the Atmosphere (CIRA)
+                (CIRA)
               </a>
               . Recent work can be found in the literature and project sections below. I also earned
               BS and MS degrees in Computer Science with a minor in Mathematics from CSU. And some

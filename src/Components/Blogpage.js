@@ -10,8 +10,7 @@ import Button from 'react-bootstrap/Button';
 import { BsArrowLeft } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
-
-import Footer from './Footer';
+import { useTheme } from '@mui/material/styles';
 
 import './Blogpage.css';
 
@@ -19,6 +18,7 @@ const MARKDOWN = 'source.md';
 
 function Blogpage({ setNeedBanner, dir }) {
   const [content, setContent] = useState('');
+  var isDarkMode = useTheme().palette.mode === 'dark';
 
   useEffect(() => {
     setNeedBanner(false);
@@ -90,7 +90,10 @@ function Blogpage({ setNeedBanner, dir }) {
                 className='inline-image'
                 alt={alt[0]}
                 id={alt[0]}
-                style={{ maxWidth: `${width}%` }}
+                style={{
+                  maxWidth: `${width}%`,
+                  filter: isDarkMode ? 'invert(93%) saturate(120%) hue-rotate(180deg)' : 'none',
+                }}
                 src={require(`../assets/blogs/md/${dir}/${node.properties.src}`)}
               />
             );
@@ -148,7 +151,6 @@ function Blogpage({ setNeedBanner, dir }) {
           ),
         }}
       />
-      <Footer />
     </div>
   );
 }

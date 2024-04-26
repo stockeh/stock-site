@@ -5,11 +5,20 @@
   object-fit: cover; 
 }
 
-.blogs-card-link {
-    color: var(--black) !important;
+.blogs-card-link:hover {
+  text-decoration: none !important;
 }
 
-.blogs-card-link:hover {
-    color: var(--blue) !important;
-    text-decoration: none !important;
+.card-title, .card-title:visited {
+  color: var(--mui-palette-text-primary);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card:hover .card-title {
+    color: var(--mui-palette-info-dark);
+  }
+}
+
+.card:active .card-title {
+  color: var(--mui-palette-info-dark);
 }

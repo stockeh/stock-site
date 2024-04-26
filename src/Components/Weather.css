@@ -26,13 +26,13 @@
     margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
-    color: #686868;
+    color: var(--mui-palette-text-secondary);
     position: relative;
     width: fit-content;
 }
 
 .banner-weather-desc {
-    font-size: small;
+    font-size: .9rem;
     padding-left: 8px;
 }
 

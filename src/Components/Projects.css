@@ -1,13 +1,12 @@
 .sticky-parent {
-    overflow: unset;
-    position: unset;
-  }
+  position: relative;
+}
 
 .sticky-category {
+  position: sticky;
   top: 4rem;
   z-index: 2;
   margin-bottom: 2rem;
-  position: sticky;
 }
 
 .line {
@@ -16,43 +15,69 @@
   top: 0;
   bottom: 0;
   width: 1px;
-  background: var(--white);
+  background: var(--mui-palette-text-disabled);
   z-index: 1;
 }
 
 .word {
-  color: var(--blue);
+  color: var(--mui-palette-info-dark);
   text-transform: uppercase;
   letter-spacing: 1px;
   font: 24px arial, sans-serif;
-  background: white;
+  background: var(--mui-palette-background-default);
   text-align: center;
 }
 
 .icon {
-  color: var(--black);
+  color: var(--mui-palette-text-disabled) !important;
 }
 
 .icon:hover {
-  color: var(--blue);
+  color: var(--mui-palette-info-dark) !important;
 }
 
-.card:hover {
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03), 0 2px 8px rgba(0, 0, 0, 0.03),
-    0 4px 16px rgba(0, 0, 0, 0.04);
+.card {
+  background-color: var(--mui-palette-background-default);
+  border-color: var(--mui-palette-grey-200);
+  border-color: var(--mui-palette-grey-200);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    -webkit-box-shadow: var(--mui-card-shadow);
+    box-shadow: var(--mui-card-shadow);
+  }
+}
+.card:active {
+  -webkit-box-shadow: var(--mui-card-shadow);
+  box-shadow: var(--mui-card-shadow);
 }
 
 .card-header {
-  background-color: var(--white);
+  background-color: var(--mui-palette-divider);
 }
 
-.card-header-text {
-  color: var(--black);
+.card-header-text, .card-header-text:visited {
+  color: var(--mui-palette-text-primary) !important;
   border: transparent;
+  margin-bottom: -.5rem;
+  width: 100%;
 }
 
-.card-header-text:hover {
-  color: var(--blue);
+@media (hover: hover) and (pointer: fine) {
+  .card-header-text:hover {
+    color: var(--mui-palette-info-dark) !important;
+  }
+}
+
+.card-header-text:active {
+  color: var(--mui-palette-info-dark) !important;
+}
+
+.card-text {
+  color: var(--mui-palette-text-primary);
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 /* Only apply CSS when screen > sm */
@@ -63,17 +88,6 @@
   }
   #BigData .line {
     margin-bottom: 3rem;
-    background: linear-gradient(var(--white) 75%, white);
+    background: linear-gradient(var(--mui-palette-text-disabled) 15%, var(--mui-palette-background-default));
   }
-}
-
-.card-text {
-  text-align: justify;
-  text-justify: inter-word;
-}
-
-.btn.focus,
-.btn:focus {
-  outline: 5px;
-  box-shadow: 0 0 0 0rem rgb(0 123 255 / 25%);
 }

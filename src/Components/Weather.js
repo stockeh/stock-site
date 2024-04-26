@@ -167,7 +167,8 @@ function Weather() {
               >
                 <Card
                   sx={{
-                    background: '#fff',
+                    background: 'var(--mui-palette-background-default)',
+                    boxShadow: 'var(--mui-card-shadow)',
                     // Apply responsive minWidth using @media queries
                     '@media (min-width: 375px)': {
                       minWidth: 375,
@@ -191,7 +192,7 @@ function Weather() {
                         variant='h6'
                         component='div'
                         sx={{
-                          color: 'var(--black)',
+                          color: 'var(--mui-palette-text-primary)',
                         }}
                       >
                         {getIcon(data[focusedTime].weather[0].main.toLowerCase())}{' '}
@@ -206,7 +207,7 @@ function Weather() {
                           <TbDroplet
                             color='text.secondary'
                             style={{
-                              color: 'rgba(0, 0, 0, 0.6)',
+                              color: 'var(--mui-palette-text-secondary)',
                             }}
                           />
                           <Typography color='text.secondary' sx={{ ml: 0.5, mr: 1 }}>
@@ -233,52 +234,61 @@ function Weather() {
                       )}
                     </Box>
                     <ResponsiveContainer width='100%' height={250}>
-                      <LineChart
-                        onMouseMove={(state) => {
-                          if (state.isTooltipActive) {
-                            setFocusedTime(state.activeTooltipIndex);
-                            if (contentRef.current && mousePosition > 50) {
-                              setContentMargin(mousePosition - 50);
-                            }
-                          } else {
-                            setFocusedTime(0);
-                            setContentMargin(0);
+                    <LineChart
+                      onMouseMove={(state) => {
+                        if (state.isTooltipActive) {
+                          setFocusedTime(state.activeTooltipIndex);
+                          if (contentRef.current && mousePosition > 50) {
+                            setContentMargin(mousePosition - 50);
                           }
-                        }}
-                        data={data.slice(0, 18).map((item) => {
-                          return {
-                            time: item.dt,
-                            temp: item.main.temp,
-                          };
-                        })}
-                        margin={{ top: 5, right: 30, left: 10, bottom: 5 }}
-                      >
-                        <CartesianGrid strokeDasharray='3 3' />
-                        <XAxis
-                          dataKey='time'
-                          tickFormatter={(tick) => moment.unix(tick).format('h A')}
-                          interval={2}
-                          ticks={data.slice(1, 17).map((item) => item.dt)}
-                        />
-                        <YAxis domain={['auto', 'auto']} orientation='right' width={5} />
-                        <Tooltip content={<></>} />
-                        <Line
-                          type='monotone'
-                          dataKey='temp'
-                          stroke='var(--orange)'
-                          strokeWidth={2.5}
-                          dot={false}
-                        />
-                      </LineChart>
+                        } else {
+                          setFocusedTime(0);
+                          setContentMargin(0);
+                        }
+                      }}
+                      data={data.slice(0, 18).map((item) => {
+                        return {
+                          time: item.dt,
+                          temp: item.main.temp,
+                        };
+                      })}
+                      margin={{ top: 5, right: 30, left: 10, bottom: 5 }}
+                    >
+                      <CartesianGrid strokeDasharray='3 3' />
+                      <XAxis
+                        dataKey='time'
+                        tickFormatter={(tick) => moment.unix(tick).format('h A')}
+                        interval={2}
+                        ticks={data.slice(1, 17).map((item) => item.dt)}
+                        tick={{ fill: 'var(--mui-palette-text-secondary)' }}
+                        tickLine={{ stroke: 'var(--mui-palette-text-secondary)' }}
+                        axisLine={{ stroke: 'var(--mui-palette-text-secondary)' }}
+                      />
+                      <YAxis domain={['auto', 'auto']} 
+                             orientation='right' 
+                             width={5} 
+                             tick={{ fill: 'var(--mui-palette-text-secondary)' }}
+                             tickLine={{ stroke: 'var(--mui-palette-text-secondary)' }}
+                             axisLine={{ stroke: 'var(--mui-palette-text-secondary)' }}
+                      />
+                      <Tooltip content={<></>} />
+                      <Line
+                        type='monotone'
+                        dataKey='temp'
+                        stroke='var(--orange)'
+                        strokeWidth={2.5}
+                        dot={false}
+                      />
+                    </LineChart>
                     </ResponsiveContainer>
                   </CardContent>
                   <Grid container>
                     <Typography
-                      variant='body2'
                       color='text.secondary'
                       sx={{
                         paddingBottom: '5px',
                         paddingLeft: '10px',
+                        fontSize: '.9rem',
                       }}
                     >
                       {moment.unix(data[focusedTime].dt).format('MMM D, YYYY')}
@@ -286,11 +296,11 @@ function Weather() {
                     <Grid item xs>
                       <Grid container direction='row-reverse'>
                         <Typography
-                          variant='body2'
                           color='text.secondary'
                           sx={{
                             paddingBottom: '5px',
                             paddingRight: '10px',
+                            fontSize: '.9rem',
                           }}
                         >
                           {lat.toFixed(3)}, {lon.toFixed(3)}

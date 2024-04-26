@@ -4,11 +4,37 @@
     max-width: 50px;
 }
 
-.timeline-connector {
-    background-color: red !important;
-}
-
 .timeline-dot {
     border: none !important;
     background-color: transparent;
+}
+
+.experience-timeline-opposite-content {
+    padding-top: 25px !important;
+    font-family: 'Courier New', Courier, monospace !important;
+    font-size: .9em !important;
+    text-align: right !important;
+    color: var(--mui-palette-text-primary) !important;
+}
+
+/* if on mobile, decrease the padding-top */
+@media (max-width: 1200px) {
+    .experience-timeline-opposite-content {
+        padding-top: 20px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .experience-timeline-opposite-content {
+        padding-top: 8px !important;
+    }
+}
+
+.experience-timeline-connector {
+    width: 1px !important;
+    background: var(--mui-palette-text-disabled) !important;
+}
+
+.experience-timeline-connector#Boeing {
+    background: linear-gradient(var(--mui-palette-text-disabled), var(--mui-palette-background-default) 80%) !important;
 }

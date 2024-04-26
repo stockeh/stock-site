@@ -4,6 +4,7 @@ import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import { Link } from 'react-router-dom';
+import { useTheme } from '@mui/material/styles';
 
 import blogs from '../assets/blogs/blogs.json';
 
@@ -12,6 +13,8 @@ import './Blogs.css';
 const MAX_LENGTH = 250;
 
 function Blogs() {
+  var isDarkMode = useTheme().palette.mode === 'dark';
+
   return (
     <div>
       <Row xs={1} md={2} lg={3} className='g-4'>
@@ -21,6 +24,7 @@ function Blogs() {
               <Link to={item.dir} className='blogs-card-link'>
                 <Card className='mt-3 h-100'>
                   <Card.Img
+                    style={isDarkMode ? { filter: 'invert(93%) saturate(120%) hue-rotate(180deg)'} : {}}
                     className='blogs-cardimg'
                     variant='top'
                     src={require(`../assets/blogs/md/${item.dir}/${item.src}`)}

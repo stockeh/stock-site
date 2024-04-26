@@ -1,48 +1,61 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
+import { Row, Col, Card, Collapse } from 'react-bootstrap';
+import { FaGithub } from 'react-icons/fa';
+import { RiFilePaper2Line } from 'react-icons/ri';
 
 import machineLearning from '../assets/projects/machine-learning.json';
 import distributedSystems from '../assets/projects/distributed-systems.json';
 import bigData from '../assets/projects/big-data.json';
-
-import { Row, Col, Card } from 'react-bootstrap';
-import { FaGithub } from 'react-icons/fa';
-import { RiFilePaper2Line } from 'react-icons/ri';
-
 import './Projects.css';
 
-function CustomCard({ card_id, item, show }) {
+function CustomCard({ card_id, item, initialShow }) {
+  const [show, setShow] = useState(initialShow);
+  const collapseRef = useRef(null);
+
+  const toggleCollapse = () => {
+    setShow(!show);
+  };
+
   return (
     <Card className='text-start'>
-      <Card.Header className='card-header'>
+      <Card.Header
+        className='card-header'
+        style={{
+          borderBottom: show ? '1px solid var(--mui-palette-grey-400)' : '0px',
+        }}
+      >
         <button
           className='btn card-header-text text-start'
-          data-bs-toggle='collapse'
-          href={'#collapse' + card_id}
+          onClick={toggleCollapse}
+          aria-expanded={show}
+          aria-controls={`collapse${card_id}`}
         >
           <h5>{item.title}</h5>
         </button>
       </Card.Header>
 
-      <div id={'collapse' + card_id} className={'collapse' + show}>
-        <div className='card-body'>
-          <p className='card-text'>{item.desc}</p>
-          <span>
-            {item.link ? (
-              <span>
-                <a target='_blank' rel='noopener noreferrer' href={item.link} className='icon'>
-                  <FaGithub />
+      <Collapse in={show}>
+        <div ref={collapseRef} id={`collapse${card_id}`}>
+          <div className='card-body'>
+            <p className='card-text'>{item.desc}</p>
+            <span>
+              {item.link && (
+                <span>
+                  <a target='_blank' rel='noopener noreferrer' href={item.link} className='icon'>
+                    <FaGithub />
+                  </a>
+                  <span>&nbsp;&nbsp;</span>
+                </span>
+              )}
+              {item.paper && (
+                <a target='_blank' rel='noopener noreferrer' href={item.paper} className='icon'>
+                  <RiFilePaper2Line />
                 </a>
-                <span>&nbsp;&nbsp;</span>
-              </span>
-            ) : null}
-            {item.paper ? (
-              <a target='_blank' rel='noopener noreferrer' href={item.paper} className='icon'>
-                <RiFilePaper2Line />
-              </a>
-            ) : null}
-          </span>
+              )}
+            </span>
+          </div>
         </div>
-      </div>
+      </Collapse>
     </Card>
   );
 }
@@ -50,29 +63,27 @@ function CustomCard({ card_id, item, show }) {
 function Category({ section, data }) {
   return (
     <Row id={section.replace(/\s+/g, '')}>
-      <Col lg={3} sm={12} style={{ position: 'relative' }}>
+      <Col lg={3} sm={12} className='sticky-parent'>
         <div className='line' />
-        <div className='sticky-parent'>
-          <div className='sticky-category'>
-            <div className='word'>
-              <h3>{section}</h3>
-            </div>
+        <div className='sticky-category'>
+          <div className='word'>
+            <h3>{section}</h3>
           </div>
         </div>
       </Col>
-      <div className='col-lg-9 col-sm-12'>
+      <Col lg={9} sm={12}>
         {data.map((item, index) => (
           <div key={section.replace(/\s+/g, '') + index}>
             <CustomCard
               item={item}
               card_id={section.replace(/\s+/g, '') + index}
-              show={index === 0 ? ' show' : ''}
+              initialShow={index === 0}
             />
             <br />
           </div>
         ))}
         <br />
-      </div>
+      </Col>
     </Row>
   );
 }
