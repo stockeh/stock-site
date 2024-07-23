@@ -32,7 +32,7 @@ function AutoTimelineItem({ data }) {
           <TimelineDot className='timeline-dot' variant='outlined'>
             <img className='timeline-logo' src={data.logo} alt='logo' />
           </TimelineDot>
-          <TimelineConnector id={data.company} className='experience-timeline-connector'/>
+          <TimelineConnector id={data.company} className='experience-timeline-connector' />
         </TimelineSeparator>
         <TimelineContent sx={{ py: '8px', px: 2, paddingBottom: '30px' }}>
           <Typography variant='h6' component='span'>
@@ -60,7 +60,7 @@ function Experience() {
       <AutoTimelineItem
         data={{
           year: '11.2023 - 02.2024',
-          company: 'NVIDIA',
+          company: 'NVIDIA Research',
           logo: nvidia,
           position: 'Research Intern',
           description: <>Machine learning for global climate and weather modeling.</>,

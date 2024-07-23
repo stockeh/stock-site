@@ -1,12 +1,26 @@
 [
   {
+    "title": "SRViT: Vision Transformers for Estimating Radar Reflectivity from Satellite Observations at Scale",
+    "abstract": "We introduce a transformer-based neural network to generate high-resolution (3km) synthetic radar reflectivity fields at scale from geostationary satellite imagery. This work aims to enhance short-term convective-scale forecasts of high-impact weather events and aid in data assimilation for numerical weather prediction over the United States. Compared to convolutional approaches, which have limited receptive fields, our results show improved sharpness and higher accuracy across various composite reflectivity thresholds. Additional case studies over specific atmospheric phenomena support our quantitative findings, while a novel attribution method is introduced to guide domain experts in understanding model outputs.",
+    "authors": "Jason Stock, Kyle Hilburn, Imme Ebert-Uphoff, Charles Anderson",
+    "pdf": "https://arxiv.org/abs/2406.16955",
+    "poster": "files/ICML_2024___SRViT__Poster.pdf",
+    "conference": "In ICLR 2024 Workshop Tackling on Climate Change with Machine Learning",
+    "conf": [
+      "ICML 2024 ML4ESM Workshop (Poster)"
+    ],
+    "logo": "srvit-grad.png"
+  },
+  {
     "title": "DiffObs: Generative Diffusion for Global Forecasting of Satellite Observations",
     "abstract": "This work presents an autoregressive generative diffusion model (DiffObs) to predict the global evolution of daily precipitation, trained on a satellite observational product, and assessed with domain-specific diagnostics. The model is trained to probabilistically forecast day-ahead precipitation. Nonetheless, it is stable for multi-month rollouts, which reveal a qualitatively realistic superposition of convectively coupled wave modes in the tropics. Cross-spectral analysis confirms successful generation of low frequency variations associated with the Madden--Julian oscillation, which regulates most subseasonal to seasonal predictability in the observed atmosphere, and convectively coupled moist Kelvin waves with approximately correct dispersion relationships. Despite secondary issues and biases, the results affirm the potential for a next generation of global diffusion models trained on increasingly sparse, and increasingly direct and differentiated observations of the world, for practical applications in subseasonal and climate prediction.",
     "authors": "Jason Stock, Jaideep Pathak, Yair Cohen, Mike Pritchard, Piyush Garg, Dale Durran, Morteza Mardani, Noah Brenowitz",
     "pdf": "https://arxiv.org/abs/2404.06517",
     "poster": "files/ICLR_2024___DiffObs__Poster.pdf",
     "conference": "In ICLR 2024 Workshop Tackling on Climate Change with Machine Learning",
-    "conf": ["ICLR 2024 Climate Change Workshop (Poster)"],
+    "conf": [
+      "ICLR 2024 Climate Change Workshop (Poster)"
+    ],
     "logo": "diffobs_wk.png"
   },
   {
@@ -15,8 +29,10 @@
     "authors": "Imme Ebert-Uphoff, Lander Ver Hoef, John S. Schreck, Jason Stock, Maria J. Molina, Amy McGovern, Michael Yu, Bill Petzke, Kyle Hilburn, David M. Hall, David J. Gagne, Sam Scheuerman",
     "pdf": "https://www.ai2es.org/wp-content/uploads/2024/01/Sharpness_paper_draft_v1.pdf",
     "conference": "NSF AI Institute for Research on Trustworthy AI in Weather, Climate, and Coastal Oceanography",
-    "conf": ["AI2ES (Draft)"],
-    "logo": "sharpness.png"
+    "conf": [
+      "AI2ES (Draft)"
+    ],
+    "logo": "sharpness-2.png"
   },
   {
     "title": "Memory-Based Sequential Attention",
@@ -25,7 +41,9 @@
     "pdf": "https://openreview.net/forum?id=EykfhjYrM0",
     "poster": "files/neurips23-memory-seq-poster.pdf",
     "conference": "In NeurIPS 2023 Gaze Meets ML | Proceedings of Machine Learning Research 2024",
-    "conf": ["NeurIPS 2023; PMLR Gaze Meets ML Workshop (Oral)"],
+    "conf": [
+      "NeurIPS 2023; PMLR Gaze Meets ML Workshop (Oral)"
+    ],
     "logo": "mem-seq-attn.png"
   },
   {
@@ -34,7 +52,9 @@
     "authors": "Katherine Haynes, Jason Stock, Jack Dostalek, Charles Anderson, Imme Ebert-Uphoff",
     "pdf": "https://journals.ametsoc.org/view/journals/aies/aop/AIES-D-22-0090.1/AIES-D-22-0090.1.xml",
     "conference": "Artificial Intelligence for the Earth Systems (AIES)",
-    "conf": ["AIES 2023 (Journal)"],
+    "conf": [
+      "AIES 2023 (Journal)"
+    ],
     "logo": "vertical_profile_uq.png"
   },
   {
@@ -43,7 +63,10 @@
     "authors": "Jason Stock, Charles Anderson",
     "pdf": "https://arxiv.org/abs/2210.12185",
     "conference": "In NeurIPS 2022 Workshop Tackling on Climate Change with Machine Learning | AMS 103rd Annual Meeting, 22nd Conference on Artificial Intelligence for Environmental Science",
-    "conf": ["NeurIPS 2022 Climate Change Workshop (Poster)", "AMS AI 2023 (Oral)"],
+    "conf": [
+      "NeurIPS 2022 Climate Change Workshop (Poster)",
+      "AMS AI 2023 (Oral)"
+    ],
     "logo": "atten_scattering_network.png"
   },
   {
@@ -52,7 +75,9 @@
     "authors": "Charles Anderson, Jason Stock",
     "pdf": "https://arxiv.org/abs/2212.04478",
     "conference": "In NeurIPS 2022 Workshop Tackling on Climate Change with Machine Learning | AMS 103rd Annual Meeting, 22nd Conference on Artificial Intelligence for Environmental Science",
-    "conf": ["NeurIPS 2022 Climate Change Workshop (Poster)"],
+    "conf": [
+      "NeurIPS 2022 Climate Change Workshop (Poster)"
+    ],
     "logo": "cmip6_alopex.png"
   },
   {
@@ -62,7 +87,9 @@
     "pdf": "https://arxiv.org/abs/2205.03355",
     "poster": "files/stock-cs793-F2021-compressed.pdf",
     "conference": "AI for Earth and Space Science Workshop at the International Conference on Learning Representations",
-    "conf": ["ICLR 2022 AI4Earth Workshop (Oral)"],
+    "conf": [
+      "ICLR 2022 AI4Earth Workshop (Oral)"
+    ],
     "logo": "trainable_wavelet_1.png"
   },
   {
@@ -71,7 +98,9 @@
     "authors": "Charles Anderson, Jason Stock, David Anderson",
     "pdf": "https://arxiv.org/abs/2205.06351",
     "conference": "AI for Earth and Space Science Workshop at the International Conference on Learning Representations",
-    "conf": ["ICLR 2022 AI4Earth Workshop (Poster)"],
+    "conf": [
+      "ICLR 2022 AI4Earth Workshop (Poster)"
+    ],
     "logo": "progressive_cascade_nets_1.png"
   },
   {
@@ -80,17 +109,23 @@
     "authors": "Imme Ebert-Uphoff, Ryan Lagerquist, Kyle Hilburn, Yoonjin Lee, Katherine Haynes, Jason Stock, Christina Kumler, Jebb Q. Stewart",
     "pdf": "https://arxiv.org/abs/2106.09757",
     "conference": "arXiv Preprint 2021",
-    "conf": ["AMS AI 2022 (Oral)", "3rd NOAA AI Workshop 2021 (Oral)"],
+    "conf": [
+      "AMS AI 2022 (Oral)",
+      "3rd NOAA AI Workshop 2021 (Oral)"
+    ],
     "logo": "cira_loss_1.png"
   },
   {
     "title": "Using Machine Learning to Improve Vertical Profiles of Temperature and Moisture for Severe Weather Nowcasting",
     "abstract": "Vertical profiles of temperature and moisture as provided by radiosondes are of paramount importance to forecasting convective activity, yet the National Weather Service radiosonde network is spatially coarse and suffers from temporal paucity. Supplementary information generated by numerical weather prediction (NWP) models is invaluable—analysis and forecast profiles are available at a high sampling frequency and horizontal resolution. However, numerical models contain inherent errors and inaccuracies, and many of these errors occur near the surface and influence the short-term...",
-    "authors": "Jason Stock, John Dandy, Imme Ebert-Uphoff, Chuck Anderson, Jack Dostalek, Lewis Grasso, Jon Zeitler, Harry Weinman",
+    "authors": "Jason Stock, John Dandy, Imme Ebert-Uphoff, Charles Anderson, Jack Dostalek, Lewis Grasso, Jon Zeitler, Harry Weinman",
     "pdf": "https://mountainscholar.org/handle/10217/233704",
     "poster": "files/stock-cs793-S2021-compressed.pdf",
     "conference": "AMS 101st Annual Meeting, 20th Conference on Artificial Intelligence for Environmental Science.",
-    "conf": ["AMS AI 2021 (Oral)", "3rd NOAA AI Workshop 2021 (Oral)"],
+    "conf": [
+      "AMS AI 2021 (Oral)",
+      "3rd NOAA AI Workshop 2021 (Oral)"
+    ],
     "logo": "soundings_1.png"
   },
   {
@@ -99,7 +134,9 @@
     "authors": "Jason Stock, Tom Cavey",
     "pdf": "https://arxiv.org/abs/2101.02380",
     "conference": "arXiv Preprint 2021",
-    "conf": ["arXiv Preprint 2021"],
+    "conf": [
+      "arXiv Preprint 2021"
+    ],
     "logo": "whos_a_good_boy_1.png"
   },
   {
@@ -108,7 +145,9 @@
     "authors": "Jason Stock, Andy Dolan, Tom Cavey",
     "pdf": "https://arxiv.org/abs/2004.03452",
     "conference": "arXiv Preprint 2020",
-    "conf": ["arXiv Preprint 2020"],
+    "conf": [
+      "arXiv Preprint 2020"
+    ],
     "logo": "robust_1.png"
   }
 ]
